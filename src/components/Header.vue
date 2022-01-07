@@ -1,7 +1,7 @@
 <template>
   <div id="header">
     <div class="e-logo">
-      <a href="#"><img class="e-logo__img" src="/src/imgs/Logo.png" /></a>
+      <a href="/"><img class="e-logo__img" src="/imgs/logo.png" /></a>
     </div>
     <div class="e-menu">
       <ul class="e-menu__ul">
@@ -18,10 +18,14 @@
           <a class="e-decoration" href="personalisation.html">Ma paire</a>
         </li>
         <li class="e-menu__li">
-          <a href="#"><img src="/src/imgs/icon_profil.png" alt="" /></a>
+          <a href="#" id="e-menu__img"
+            ><img src="/imgs/icon_profil.png" alt=""
+          /></a>
         </li>
         <li class="e-menu__li">
-          <a href="#"><img src="/src/imgs/icon_cart.png" alt="" /></a>
+          <a href="#" id="e-menu__img"
+            ><img src="/imgs/icon_cart.png" alt=""
+          /></a>
         </li>
       </ul>
     </div>
@@ -29,50 +33,64 @@
 </template>
 
 <style lang="scss" scoped>
-#header{
-    background-color: $colordarkgreen;
-    max-height: 90px;
-    max-width: 1200px;
-    border-bottom-left-radius: 30px ;
-    border-bottom-right-radius: 30px ;
+#header {
+  background-color: $colordarkgreen;
+  height: 50px;
+  max-height: 50px;
+  max-width: 1100px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 0 50px;
+  box-shadow: 3px 3px 15px 2px $colorshadow;
+  box-sizing: border-box;
+}
+
+.e-logo {
+  height: 100%;
+  position: relative;
+  a {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin: auto;
-    box-shadow: 1px 1px 5px 2px $colorshadow;
-
+    height: 100%;
+  }
 }
 
-.e-logo{
-    width: auto;
-    display: flex;
-    margin: 0px 35px;
+.e-logo__img {
+  max-height: 80%;
 }
 
-.e-logo__img{
-    max-width: 200px;
-    margin: 10px;
+.e-decoration {
+  font-size: 16px;
+  text-decoration: none;
+  color: $colorwhite;
+  font-family: $fontTexte;
 }
 
-
-.e-decoration{
-    font-size: 16px;
-    text-decoration: none;
-    color: $colorwhite;
-    font-family: $fontTexte;
-    
+.e-menu__ul {
+  display: flex;
+  flex-direction: row;
 }
-
-.e-menu__ul{
-    display: flex;
-    flex-direction: row;
-}
-.e-menu__li{
-    display: flex ;
-    flex-direction: row;
+.e-menu__li {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  align-items: center;
+  &:not(:last-child) {
     margin-right: 35px;
-    text-decoration: none;
-    align-items: center;
-    
+  }
+}
+
+#e-menu__img {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  img {
+    height: 1.5em;
+    aspect-ratio: 1/1;
+  }
 }
 </style>

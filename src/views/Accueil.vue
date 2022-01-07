@@ -93,3 +93,111 @@
 <script>
 
 </script>
+
+<style lang="scss" scoped>
+  .valeurs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.e-valeur{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.e-valeur__haut{
+    height: 358px;
+    width: 337px;
+    background: $colordarkpink;
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 5px 0px $colorshadow;
+
+}
+
+.e-nosValeur-Img{
+    height: 150px;
+}
+
+.e-valeur__bas{
+    width: 337px;
+    height: 70px;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    vertical-align: middle;
+    box-shadow: 0px 1px 5px 2px $colorshadow;
+}
+
+.e-emptybutton {
+    font-family: $fontTexte;
+    font-weight: bold;
+    color: $colordarkgreen;
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+    min-width: 220px;
+    border-radius: 28px;
+    border-width: 4px;
+    border-color: $colordarkgreen;
+    border-style: solid;
+    box-shadow: 1px 1px 5px 2px $colorshadow;
+
+   /* @include small-up {
+        font-size: 12px;
+    }
+
+    @include medium-up {
+        font-size: 16px;
+    }
+
+    */
+
+    &:hover {
+        cursor: pointer;
+        background-color: $colordarkgreen;
+        color: $colorwhite;
+        box-shadow: none;
+        transition: all ease-out 0.4s;
+    }
+
+}
+
+.e-fullbutton {
+    font-family: $fontTexte;
+    font-weight: bold;
+    color: $colorwhite;
+    background-color: $colordarkgreen;
+    padding: 10px;
+    margin: 20px;
+    min-width: 220px;
+    border-radius: 28px;
+    border-width: 4px;
+    border-color: $colordarkgreen;
+    border-style: solid;
+    box-shadow: 1px 1px 5px 2px $colorshadow;
+
+    /*@include small-up {
+        font-size: pxToRem(12);
+    }
+
+    @include medium-up {
+        font-size: pxToRem(18)
+    }
+    */
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: none;
+        transition: all ease-out 0.4s;
+    }
+}
+
+</style>
