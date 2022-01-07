@@ -377,18 +377,28 @@
         support fiable et durable constituant une copie fidèle conformément aux
         dispositions de l’article 1348 du Code civil.
       </p>
+      <br />
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+  h2 {
+    text-align: left;
+  }
+
+  h3 {
+    text-align: left;
+  }
+  
   p {
     text-align: left;
   }
 
   div {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    scroll-padding-bottom: 50px;
   }
 
   br {
