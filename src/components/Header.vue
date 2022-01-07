@@ -56,7 +56,7 @@
 
 
 .e-decoration{
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     color: $colorwhite;
     font-family: $fontTexte;
