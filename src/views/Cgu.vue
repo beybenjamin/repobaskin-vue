@@ -2,8 +2,7 @@
   <div class="cgu">
     <div>
       <br />
-      <p class="e-cgutitre_p">BASKIN</p>
-      <br />
+      <h2 class="e-cgutitre_h2">BASKIN</h2>
       <p class="e-cgucontenu_p">
         Forme d’entreprise: Société à responsabilité limitée<br />
         Siège social : 5 avenue Léon Blum – 25200 MONTBÉLIARD – FRANCE<br />
@@ -15,8 +14,8 @@
         Date de dernière mise à jour : 30/11/2021
       </p>
       <br />
-      <p class="e-cgutitre_p">Préambule</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Préambule</h3>
       <p class="e-cgucontenu_p">
         VEUILLEZ LIRE LES INFORMATIONS SUIVANTES<br />
         NOUS SOUHAITONS ATTIRER VOTRE ATTENTION SUR CES CONDITIONS GÉNÉRALES
@@ -31,13 +30,15 @@
         CONDITIONS GÉNÉRALES.
       </p>
       <br />
-      <p class="e-cgutitre_p">
-        SECTION 1:<br />
+
+      <h2 class="e-cgutitre_h2">
+        SECTION 1:
+      </h2>
+      <p class="e-cgusoustitre_p">
         Les Conditions Générales d'Utilisation
       </p>
-      <br />
-      <p class="e-cgutitre_p">Article 1 : À propos du site web</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 1 : À propos du site web</h3>
       <p class="e-cgucontenu_p">
         Le présent site web est géré par OVH, entreprise enregistrée en France
         sous le numéro de société 351164488.<br />
@@ -53,8 +54,8 @@
         utilisateurs inscrits sur notre site.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 2 : Les droits de Baskin</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 2 : Les droits de Baskin</h3>
       <p class="e-cgucontenu_p">
         Les droits d'auteur et autres droits de propriété intellectuelle sur
         l'ensemble de ce site internet (hors personnalisation) sont notre
@@ -77,8 +78,8 @@
         à des tiers.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 3 : Contenu du site web</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 3 : Contenu du site web</h3>
       <p>
         Nous avons pris grand soin dans la rédaction et réalisation de ce site
         web, mais ni nous ni nos directeurs, employés ou autres représentants,
@@ -109,10 +110,10 @@
         ligne.
       </p>
       <br />
-      <p class="e-cgutitre_p">
+
+      <h3 class="e-cgutitre_h3">
         Article 4 : Comment devez-vous utiliser ce site web ?
-      </p>
-      <br />
+      </h3>
       <p class="e-cgucontenu_p">
         Les observations ou commentaires qui d'une façon ou d'une autre
         diffamatoire seraient injurieux, obscènes, illégaux, sexistes, racistes
@@ -147,21 +148,22 @@
         quiconque ne se conformant pas à ces Conditions Générales d'Utilisation.
       </p>
       <br />
-      <p class="e-cgutitre_p">
-        SECTION 2 :<br />
+
+      <h2 class="e-cgutitre_h2">
+        SECTION 2 :
+      </h2>
+      <p class="e-cgusoustitre_p">
         Conditions générales de vente
       </p>
-      <br />
-      <p class="e-cgutitre_p">Article 1 : Objet</p>
-      <br />
+      <h3 class="e-cgutitre_h3">Article 1 : Objet</h3>
       <p class="e-cgucontenu_p">
         Les présentes conditions régissent les ventes par la société BASKIN – 5
         avenue Léon Blum – 25200 MONTBÉLIARD – FRANCE de chaussures
         personnalisées.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 2 : Prix</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 2 : Prix</h3>
       <p class="e-cgucontenu_p">
         Les prix de nos produits sont indiqués en euros toutes taxes comprises,
         sauf indication contraire et hors frais de traitement et
@@ -186,8 +188,8 @@
         sont transférés.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 3 : Commandes</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 3 : Commandes</h3>
       <p class="e-cgucontenu_p">
         Les informations contractuelles feront l’objet d’une confirmation au
         plus tard au moment de la validation de votre commande. La société
@@ -197,8 +199,8 @@
         difficulté concernant la commande reçue.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 4 : Validation de votre commande</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 4 : Validation de votre commande</h3>
       <p class="e-cgucontenu_p">
         Toute commande figurant sur le site Internet baskin.fr suppose
         l’adhésion aux présentes Conditions Générales.<br />
@@ -214,8 +216,8 @@
         d’accepter les Conditions Générales de Ventes.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 5 : Paiement</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 5 : Paiement</h3>
       <p class="e-cgucontenu_p">
         Le fait de valider votre commande implique pour vous l’obligation de
         payer le prix indiqué.<br />
@@ -229,8 +231,8 @@
         de la validation de la commande.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 6 : Rétractation</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 6 : Rétractation</h3>
       <p class="e-cgucontenu_p">
         Conformément aux dispositions de l’article L.121-21 du Code de la
         Consommation, vous disposez d’un délai de rétractation de 14 jours à
@@ -260,8 +262,8 @@
         le client, le droit de rétractation ne pourra alors être appliqué.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 7 : Disponibilité</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 7 : Disponibilité</h3>
       <p class="e-cgucontenu_p">
         Nos produits sont produits à la commande, ils ne sont donc pas
         disponibles immédiatement.<br />
@@ -275,8 +277,8 @@
         production du moment dépasse la capacité de l’atelier de BASKIN.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 8 : Livraison</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 8 : Livraison</h3>
       <p class="e-cgucontenu_p">
         Les produits sont livrés à l’adresse de livraison indiquée au cours du
         processus de commande, dans le délai indiqué sur la page de validation
@@ -294,8 +296,8 @@
         indisponibilité du client après plusieurs propositions de rendez-vous.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 9 : Garantie</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 9 : Garantie</h3>
       <p>
         Tous nos produits bénéficient de la garantie légale de conformité et de
         la garantie des vices cachés, prévues par les articles 1641 et suivants
@@ -313,8 +315,7 @@
         <br />
       </p>
 
-      <p class="e-cgutitre_p">Article 10 : Responsabilité</p>
-      <br />
+      <h3 class="e-cgutitre_h3">Article 10 : Responsabilité</h3>
       <p>
         Les produits proposés sont conformes à la législation française en
         vigueur. La responsabilité de la société BASKIN ne saurait être engagée
@@ -330,18 +331,18 @@
         extérieure ou la présence de virus informatiques.
       </p>
       <br />
-      <p class="e-cgutitre_p">
+
+      <h3 class="e-cgutitre_h3">
         Article 11 : Droit applicable en cas de litiges
-      </p>
-      <br />
+      </h3>
       <p>
         La langue du présent contrat est la langue française. Les présentes
         conditions de vente sont soumises à la loi française. En cas de litige,
         les tribunaux français seront les seuls compétents.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 12 : Propriété intellectuelle</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 12 : Propriété intellectuelle</h3>
       <p>
         Tous les éléments du site baskin.fr hors personnalisation restent la
         propriété intellectuelle et exclusive de la société BASKIN. Nul n’est
@@ -351,8 +352,8 @@
         strictement interdit sans un accord écrit exprès de la société BASKIN.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 13 : Données personnelles</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 13 : Données personnelles</h3>
       <p>
         La société BASKIN se réserve le droit de collecter les informations
         nominatives et les données personnelles vous concernant. Elles sont
@@ -369,8 +370,8 @@
         Internet.
       </p>
       <br />
-      <p class="e-cgutitre_p">Article 14 : Archivage de la Preuve</p>
-      <br />
+
+      <h3 class="e-cgutitre_h3">Article 14 : Archivage de la Preuve</h3>
       <p>
         La société BASKIN archivera les bons de commandes et les factures sur un
         support fiable et durable constituant une copie fidèle conformément aux
@@ -380,7 +381,17 @@
   </div>
 </template>
 
-
 <style lang="scss" scoped>
+  p {
+    text-align: left;
+  }
 
+  div {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  br {
+    margin: 5px;
+  }
 </style>
