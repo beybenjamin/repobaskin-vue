@@ -50,8 +50,7 @@
           </ul>
         </div>
       </div>
-     
-    </div>
+    
      <div class="e-footer__infos">
       <div class="e-info__1">
         <p>Copyright © 2021 BASKIN SARL</p>
@@ -71,6 +70,8 @@
         </div>
       </div>
     </div>
+    </div>
+    
   </footer>
 </template>
 
@@ -175,7 +176,7 @@
   background-color: $colordarkgreen;
 }
 
-.e-info__icons{
+.e-info__2{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
