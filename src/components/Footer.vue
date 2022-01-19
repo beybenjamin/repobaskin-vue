@@ -2,10 +2,12 @@
   <footer>
     <div class="e-footer">
       <div class="e-footer__logo">
-        <img src="imgs/Logo_BaskIn_Grand_Blanc.png" />
-        <img src="imgs/icons8-f-de-facebook-50.png" />
-        <img src="imgs/icons8-instagram-64.png" />
-        <img src="imgs/icons8-tic-tac-50.png" />
+        <img class="e-logo__logo" src="imgs/Logo_BaskIn_Grand_Blanc.png" />
+        <div class="e-logo__icons">
+        <img class="e-logo__facebook" src="imgs/icons8-f-de-facebook-50.png" />
+        <img class="e-logo__instagram" src="imgs/icons8-instagram-64.png" />
+        <img class="e-logo__tictoc" src="imgs/icons8-tic-tac-50.png" />
+        </div>
       </div>
       <div class="e-footer__menu">
         <div class="e-menu__1">
@@ -48,21 +50,25 @@
           </ul>
         </div>
       </div>
+     
     </div>
-    <div class="e-footer__infos">
+     <div class="e-footer__infos">
       <div class="e-info__1">
-        <!--LAISSER VIDE !-->
-      </div>
-      <div class="e-info__2">
         <p>Copyright © 2021 BASKIN SARL</p>
       </div>
-      <div class="e-info__3">
+      <div class="e-info__2">
+        <div class="e-info__icons">
         <img src="imgs/icons8-amex-100.png" />
+        </div>
+        <div class="e-info__icons">
         <img src="imgs/icons8-mastercard-100.png" />
-        <img
-          src="imgs/icons8-paypal-an-online-payments-system-operating-worldwide-48.png"
-        />
+        </div>
+        <div class="e-info__icons">
+        <img src="imgs/icons8-paypal-an-online-payments-system-operating-worldwide-48.png"/>
+        </div>
+        <div class="e-info__icons">
         <img src="imgs/icons8-visa-60.png" />
+        </div>
       </div>
     </div>
   </footer>
@@ -95,6 +101,34 @@
     background-color: red;
     box-sizing: border-box;
   }
+}
+
+
+.e-footer__logo{
+  margin-left: 7em;
+}
+
+.e-logo__logo{
+  max-height: 13em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.e-logo__icons{
+  margin-bottom: 2em;
+}
+
+.e-logo__facebook{
+  max-height: 1.5em;
+}
+
+.e-logo__instagram{
+  max-height: 1.5em;
+}
+
+.e-logo__tictoc{
+  max-height: 1.5em;
 }
 
 .e-footer__menu {
@@ -138,12 +172,13 @@
 }
 
 .e-footer__infos {
+  background-color: $colordarkgreen;
+}
+
+.e-info__icons{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  text-align: center;
-  color: $colorshoeswhite;
-  font-size: 12px;
 }
 
 a {
