@@ -1,44 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <div id="header">
-        <div class="e-logo">
-         <a href="index.html"><img class="e-logo__img" src="/src/imgs/Logo.png"></a>
-        </div>
-        <div class="e-menu">
-          <ul class="e-menu__ul">
-            <li class="e-menu__li"><a  class="e-decoration" href="marque.html">La marque</a></li>
-            <li class="e-menu__li"><a class="e-decoration" href="galerie.html">La galerie</a></li>
-            <li class="e-menu__li"><a class="e-decoration" href="contact.html">Contact</a></li>
-            <li class="e-menu__li"><a class="e-decoration" href="personalisation.html">Ma paire</a></li>
-            <li class="e-menu__li">
-              <a href="#"><img src="/src/imgs/icon_profil.png" alt=""></a>
-            </li>
-            <li class="e-menu__li">
-              <a href="#"><img src="/src/imgs/icon_cart.png" alt=""></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    <div class="c-menu">
-        <ul class="e-menu">
-            <li class="e-menu_li">Mon Profil</li>
-            <li class="e-menu_li">Mot de Passe</li>
-            <li class="e-menu_li">Adresse de livraison</li>
-            <li class="e-menu_li">Mes précommandes</li>
-            <li class="e-menu_li">Mes créations</li>
-        </ul>
-    </div>
-    <div>
+<template>
+    <div class="profil">
         <div class="e-titre">
             <p>Bienvenue à toi Théo,</p>
             <p>Nous sommes ravis de te retrouver</p>
@@ -212,21 +173,6 @@
             </div>
         </div>
     </div>
+    
 
-    <div class="footer-inferieur">
-        <div class="footer-inferieur-gauche">
-            <!--LAISSER VIDE !-->
-        </div>
-        <div class="footer-inferieur-milieu">
-            <p>Copyright © 2021 BASKIN SARL</p>
-        </div>
-        <div class="footer-inferieur-droit">
-            <img src="imgs/icons8-amex-100.png">
-            <img src="imgs/icons8-mastercard-100.png">
-            <img src="imgs/icons8-paypal-an-online-payments-system-operating-worldwide-48.png">
-            <img src="imgs/icons8-visa-60.png">
-        </div>
-    </div>
-</body>
-
-</html>
+</template>
