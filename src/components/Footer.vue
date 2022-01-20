@@ -79,10 +79,10 @@
 <style lang="scss" scoped>
 
 .e-footer {
-  --separator-height: 40px;
+  --separator-height: 50px;
   background-color: $colordarkgreen;
   position: relative;
-  margin-top: calc(var(--separator-height) + 64px);
+  /*margin-top: calc(var(--separator-height) + 64px);*/
   padding: 2em 5em;
   &::before {
     display: block;
