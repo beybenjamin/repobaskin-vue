@@ -1,7 +1,6 @@
 <template>
     <div>
-        <p>Bonjour, {{user.displayName}}</p>
-        <p>{{user.email}}</p>
+    <newshoesform/> 
         <form @submit="submit">
             <div>
                 <label for="username">Nom utilisateur</label>
@@ -26,8 +25,12 @@
 </template>
  
 <script>
+import Newshoesform from "@/components/Newshoesform"
 import axios from "axios"
 export default {
+    components: {
+        Newshoesform
+    },
     data() {
         return {
             form: {

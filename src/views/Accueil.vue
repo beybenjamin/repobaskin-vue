@@ -56,8 +56,9 @@
       <!--Metre progresse bar-->
       <button class="e-fullbutton">En savoir plus</button>
     </div>
-    <div id="media">
+    <div class="media">
       <h2>On parle de nous</h2>
+      <div class="e-media">
       <div class="monde">
         <img src="imgs/sneakers.jpg" />
         <h3>Le monde</h3>
@@ -86,6 +87,7 @@
         </p>
         <a class="suite" href="https://youtu.be/dQw4w9WgXcQ">Lire la suite</a>
       </div>
+      </div>
     </div>
   </div>
 </template>
@@ -95,7 +97,8 @@
 </script>
 
 <style lang="scss" scoped>
-  .valeurs{
+
+.valeurs{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -198,6 +201,22 @@
         box-shadow: none;
         transition: all ease-out 0.4s;
     }
+}
+
+.products{
+  background-color: $colorgrey ;
+  padding: 0em 2em;
+}
+
+.media{
+  background-color: $colorturqoise;
+  padding: 0em 2em;
+}
+
+.e-media{
+  display: flex;
+  flex-direction: row;
+  justify-content: space space-between;
 }
 
 </style>

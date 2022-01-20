@@ -6,16 +6,16 @@
     <div class="e-menu">
       <ul class="e-menu__ul">
         <li class="e-menu__li">
-          <router-link to="/marque">La marque</router-link>
+          <router-link to="/marque" class="router">La marque</router-link>
         </li>
         <li class="e-menu__li">
-          <router-link to="/galerie">La galerie</router-link>
+          <router-link to="/galerie" class="router">La galerie</router-link>
         </li>
         <li class="e-menu__li">
-          <router-link to="/contact">Contact</router-link>
+          <router-link to="/contact" class="router">Contact</router-link>
         </li>
         <li class="e-menu__li">
-          <router-link to="/perso">Ma paire</router-link>
+          <router-link to="/perso" class="router">Ma paire</router-link>
         </li>
         <li class="e-menu__li">
           <a href="#" id="e-menu__img"
@@ -74,14 +74,7 @@ export default {
 }
 
 .e-logo__img {
-  max-height: 80%;
-}
-
-.e-decoration {
-  font-size: 16px;
-  text-decoration: none;
-  color: $colorwhite;
-  font-family: $fontTexte;
+  max-height: 60%;
 }
 
 .e-menu__ul {
@@ -96,6 +89,12 @@ export default {
   &:not(:last-child) {
     margin-right: 35px;
   }
+}
+
+.router{
+  text-decoration: none;
+  color: $colorwhite;
+  font-size: 16px;
 }
 
 #e-menu__img {
