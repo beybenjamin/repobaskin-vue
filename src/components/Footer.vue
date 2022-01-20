@@ -94,8 +94,8 @@
     width: 0;
     transform: translateY(-100%);
     border-bottom: var(--separator-height) solid $colordarkgreen;
-    border-right: 100vw solid white;
-    background-color: red;
+    border-right: 100vw solid transparent;
+    background-color: transparent;
     box-sizing: border-box;
   }
 }

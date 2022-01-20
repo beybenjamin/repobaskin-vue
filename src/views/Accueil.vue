@@ -35,11 +35,12 @@
     <div class="products">
       <h2>Notre communauté</h2>
       <div class="surligner"></div>
+      <div class="c-acceuil__gallerie">
       <ul :style="{gridTemplateColumns :'repeat('+ Math.ceil(imgList.length/2)+',250px)'}">
-        <li v-for="url of imgList" :key="url"><img :src="url"/></li>
+        <li v-for="url of imgList" :key="url"><div class="e-gallerie__fond"></div><img :src="url" class="e-gallerie__image"/></li>
       </ul>
-      
-    Mettre progresse barre
+      </div>
+    <p>BARRE DE PROGRESSION</p>
       <button class="e-fullbutton">En savoir plus</button>
     </div>
     <div class="media">
@@ -89,6 +90,7 @@ export default{
   }
 }
 
+/**/
 </script>
 
 <style lang="scss" scoped>
@@ -237,12 +239,27 @@ ul{
   margin: 0;
   padding: 0;
   display: grid;
+  row-gap: 2em;
 }
 
 li{
   margin: 0;
   padding: 0; 
   list-style-type: none;
+}
+
+.e-gallerie__fond{
+  background-color:$colorwhite;
+  height: 13em;
+  width: 13em;
+  margin-bottom: 10px;
+  border-radius: 1.5em;
+}
+
+.e-gallerie__image{
+  position: absolute;
+  transform: translate(-67%, -130%);
+  max-width: 10em;
 }
 
 // On parle de nous
