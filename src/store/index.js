@@ -4,9 +4,9 @@ Vue.use(Vuex)
 export default new Vuex.Store({
     state: {
         user:{
-            displayName: null,
-            email: null,
-            authTokens: null
+            displayName: localStorage.getItem('username') ? localStorage.getItem('username') : null ,
+            email: localStorage.getItem('email') ? localStorage.getItem('email') : null,
+            authTokens: localStorage.getItem('authToken') ? localStorage.getItem('authToken') : null
         }
     },
     mutations:{
@@ -15,7 +15,9 @@ export default new Vuex.Store({
             state.user.email = data.email
             state.user.authToken = data.authToken
             
-            console.log(state.user.authToken)
+            localStorage.setItem('username',data.username)
+            localStorage.setItem('email',data.email)
+            localStorage.setItem('authToken',data.authToken)
         }
     }
 })

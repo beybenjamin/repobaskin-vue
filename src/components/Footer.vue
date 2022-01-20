@@ -15,31 +15,31 @@
           <h4 class="e-menu__h5">Votre compte</h4>
           <ul class="e-menu__ul">
             <li class="e-menu__text">
-              <a href="Profil_monProfil.html">Mon profil</a>
+              <router-link to="/profil">Mon profil</router-link>
             </li>
             <li class="e-menu__text">
-              <a href="creation.html">Mes créations</a>
+              <router-link to="/creation">Mes créations</router-link>
             </li>
           </ul>
         </div>
         <div class="e-menu__2">
           <h4 class="e-menu__h5">Baskin</h4>
           <ul class="e-menu__ul">
-            <li class="e-menu__text"><a href="marque.html">La marque</a></li>
+            <li class="e-menu__text"><router-link to="/marque">La marque</router-link></li>
             <li class="e-menu__text">
-              <a href="personalisation.html">Ma paire</a>
+              <router-link to="/perso">Ma paire</router-link>
             </li>
             <li class="e-menu__text">
-              <a href="galerie.html">La galerie</a>
+              <router-link to="/galerie">La galerie</router-link>
             </li>
-            <li class="e-menu__text"><a href="contact.html">Contact</a></li>
+            <li class="e-menu__text"><router-link to="/contact">Contact</router-link></li>
           </ul>
         </div>
         <div class="e_menu__3">
           <h4 class="e-menu__h5">Informations</h4>
           <ul class="e-menu__ul">
             <li class="e-menu__text">
-              <a href="cgu.html">Condition général d'utilisation et de vente</a>
+              <router-link to="/cgu">Condition général d'utilisation et de vente</router-link>
             </li>
             <li class="e-menu__text">
               <a href="livraison.html">Livraison</a>
