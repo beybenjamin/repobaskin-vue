@@ -1,7 +1,7 @@
 <template>
   <div class="perso">
     <section class="c-perso">
-      <img class="e-perso__img" src="src\imgs\nike_perso.png" alt="" />
+      <img class="e-perso__img" src="\imgs\nike_perso.png" alt="" />
 
       <ul class="c-list">
         <li class="c-list__item">Semelle</li>
