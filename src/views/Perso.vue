@@ -1,7 +1,10 @@
 <template>
   <div class="perso">
     <section class="c-perso">
-      <img class="e-perso__img" src="\imgs\nike_perso.png" alt="" />
+      <img class="e-perso__img_perso" src="\imgs\nike_perso.png" alt="" />
+      <img class="e-perso__icon" src="\imgs\save.png" alt="" />
+      <img class="e-perso__icon -share" src="\imgs\share.png" alt="" />
+      <img class="e-perso__icon -buy" src="\imgs\buy.png" alt="" />
 
       <ul class="c-list">
         <li class="c-list__item">Semelle</li>
@@ -25,3 +28,17 @@
     </ul>
   </div>
 </template>
+
+<script>
+
+</script>
+
+
+
+<style lang="scss" scoped>
+
+.e-perso__icon {
+   padding-top: 0;
+}
+
+</style>
