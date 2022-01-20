@@ -1,5 +1,7 @@
 <template>
     <div>
+        <p>Bonjour, {{user.displayName}}</p>
+        <p>{{user.email}}</p>
         <form @submit="submit">
             <div>
                 <label for="username">Nom utilisateur</label>
@@ -37,6 +39,12 @@ export default {
             errorMessage: null
         }
     },
+    computed:{
+        user(){
+            return this.$store.state.user
+        },
+    },
+    
     mounted() {
         
     },
@@ -49,8 +57,14 @@ export default {
                 password: this.form.password
             }).then(response => {
                 if (response.status === 200) {
-                    console.log(response)
                     this.success = true
+
+                  this.$store.commit( 'setUser', {
+                        username: response.data.data.displayName ,
+                        email: response.data.data.email ,
+                        authToken: response.data.data.token
+                    })
+
                     this.error = false
                 }
             }).catch(error => {

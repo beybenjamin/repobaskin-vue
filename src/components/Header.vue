@@ -6,16 +6,16 @@
     <div class="e-menu">
       <ul class="e-menu__ul">
         <li class="e-menu__li">
-          <a class="e-decoration" href="marque.html">La marque</a>
+          <router-link to="/marque">La marque</router-link>
         </li>
         <li class="e-menu__li">
-          <a class="e-decoration" href="galerie.html">La galerie</a>
+          <router-link to="/galerie">La galerie</router-link>
         </li>
         <li class="e-menu__li">
-          <a class="e-decoration" href="contact.html">Contact</a>
+          <router-link to="/contact">Contact</router-link>
         </li>
         <li class="e-menu__li">
-          <a class="e-decoration" href="personalisation.html">Ma paire</a>
+          <router-link to="/perso">Ma paire</router-link>
         </li>
         <li class="e-menu__li">
           <a href="#" id="e-menu__img"
@@ -29,8 +29,22 @@
         </li>
       </ul>
     </div>
+    <p>Bonjour, {{user.displayName}}</p>
+        <p>{{user.email}}</p>
   </div>
 </template>
+
+<script>
+
+export default {
+  computed: {
+    user() {
+      return this.$store.state.user
+    }
+  }
+}
+</script>
+
 
 <style lang="scss" scoped>
 #header {

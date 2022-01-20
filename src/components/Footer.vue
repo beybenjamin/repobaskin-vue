@@ -1,6 +1,7 @@
 <template>
   <footer>
     <div class="e-footer">
+      <div class="e-footer__1">
       <div class="e-footer__logo">
         <img class="e-logo__logo" src="imgs/Logo_BaskIn_Grand_Blanc.png" />
         <div class="e-logo__icons">
@@ -50,28 +51,27 @@
           </ul>
         </div>
       </div>
-    
+      </div>
      <div class="e-footer__infos">
       <div class="e-info__1">
         <p>Copyright © 2021 BASKIN SARL</p>
       </div>
       <div class="e-info__2">
-        <div class="e-info__icons">
-        <img src="imgs/icons8-amex-100.png" />
+        <div>
+        <img class="e-info__icons" src="imgs/icons8-amex-100.png" />
         </div>
-        <div class="e-info__icons">
-        <img src="imgs/icons8-mastercard-100.png" />
+        <div>
+        <img class="e-info__icons" src="imgs/icons8-mastercard-100.png" />
         </div>
-        <div class="e-info__icons">
-        <img src="imgs/icons8-paypal-an-online-payments-system-operating-worldwide-48.png"/>
+        <div>
+        <img class="e-info__icons" src="imgs/icons8-paypal-an-online-payments-system-operating-worldwide-48.png"/>
         </div>
-        <div class="e-info__icons">
-        <img src="imgs/icons8-visa-60.png" />
+        <div>
+        <img class="e-info__icons" src="imgs/icons8-visa-60.png" />
         </div>
       </div>
     </div>
     </div>
-    
   </footer>
 </template>
 
@@ -80,9 +80,6 @@
 
 .e-footer {
   --separator-height: 40px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   background-color: $colordarkgreen;
   position: relative;
   margin-top: calc(var(--separator-height) + 64px);
@@ -95,15 +92,18 @@
     height: 0;
     width: 0;
     transform: translateY(-100%);
-
     border-bottom: var(--separator-height) solid $colordarkgreen;
     border-right: 100vw solid white;
-
     background-color: red;
     box-sizing: border-box;
   }
 }
 
+.e-footer__1{
+   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 .e-footer__logo{
   margin-left: 7em;
@@ -121,15 +121,15 @@
 }
 
 .e-logo__facebook{
-  max-height: 1.5em;
+  max-height: 2.5em;
 }
 
 .e-logo__instagram{
-  max-height: 1.5em;
+  max-height: 2.5em;
 }
 
 .e-logo__tictoc{
-  max-height: 1.5em;
+  max-height: 2.5em;
 }
 
 .e-footer__menu {
@@ -140,7 +140,7 @@
 
 .e-menu__text {
   list-style: none;
-  font-size: 12px;
+  font-size: 16px;
   margin-top: 10px;
   // border-bottom: 20px solid red;
   // border-right: 200px solid green;
@@ -166,7 +166,7 @@
 }
 
 .e-menu__h5 {
-  font-size: 16px;
+  font-size: 18px;
   color: $colorshoeswhite;
   font-weight: bold;
   font-family: $fontTexte;
@@ -174,15 +174,24 @@
 
 .e-footer__infos {
   background-color: $colordarkgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .e-info__2{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  max-width: 20em;
 }
 
-a {
+.e-info__icons{
+  max-height: 2.5em;
+  margin-right: 10px;
+}
+
+.lien {
   text-decoration: none;
   color: $colorshoeswhite;
 }
