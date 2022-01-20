@@ -17,7 +17,7 @@
         </div>
         <div class="e-valeur">
           <div class="e-valeur__haut">
-            <img src="imgs/icons8-quality-64.png" />
+            <img class="e-nosValeur-Img" src="imgs/icons8-quality-64.png" />
           </div>
           <div class="e-valeur__bas">
             <h3 class="e-nosValeurs-h3">Qualité</h3>
@@ -40,7 +40,7 @@
         <li v-for="url of imgList" :key="url"><div class="e-gallerie__fond"></div><img :src="url" class="e-gallerie__image"/></li>
       </ul>
       </div>
-    <p>BARRE DE PROGRESSION</p>
+    <p class="e-progression">BARRE DE PROGRESSION</p>
       <button class="e-fullbutton">En savoir plus</button>
     </div>
     <div class="media">
@@ -108,7 +108,7 @@ h2{
   background-color: $colordarkpink;
   height: 0.2em;
   max-width: 10em;
-  margin-bottom: 2em;
+  margin-bottom: 4em;
 }
 
 // Boutons
@@ -190,6 +190,7 @@ h2{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding-bottom: 2em;
 }
 
 .e-valeur{
@@ -199,8 +200,8 @@ h2{
 }
 
 .e-valeur__haut{
-    height: 358px;
-    width: 337px;
+    height: 15em;
+    width: 30em;
     background: $colordarkpink;
     border-top-left-radius: 20px;
     border-top-right-radius:20px ;
@@ -213,12 +214,12 @@ h2{
 }
 
 .e-nosValeur-Img{
-    height: 150px;
+    height: 4.5em;
 }
 
 .e-valeur__bas{
-    width: 337px;
-    height: 70px;
+    width: 30em;
+    height: 3.5em;
     text-align: center;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -262,11 +263,15 @@ li{
   max-width: 10em;
 }
 
+.e-progression{
+  padding: 2em 0em;
+}
+
 // On parle de nous
 
 .media{
   background-color: $colorturqoise;
-  padding: 3em 2em;
+  padding: 3em 2em 8em 2em;
 }
 
 .e-media{
