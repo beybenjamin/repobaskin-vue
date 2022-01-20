@@ -4,8 +4,8 @@
       <!--Ici mettre la vidéo et le bouton "Je créer ma paire"-->
     </div>
     <div class="c-valeurs">
-    <h2>Nos valeurs</h2>
-    <div class="surligner"></div>
+      <h2>Nos valeurs</h2>
+      <div class="surligner"></div>
       <div class="valeurs">
         <div class="e-valeur">
           <div class="e-valeur__haut">
@@ -36,75 +36,104 @@
       <h2>Notre communauté</h2>
       <div class="surligner"></div>
       <div class="c-acceuil__gallerie">
-      <ul :style="{gridTemplateColumns :'repeat('+ Math.ceil(imgList.length/2)+',250px)'}">
-        <li v-for="url of imgList" :key="url"><div class="e-gallerie__fond"></div><img :src="url" class="e-gallerie__image"/></li>
-      </ul>
+        <ul
+          :style="{
+            gridTemplateColumns:
+              'repeat(' + Math.ceil(imgList.length / 2) + ',13em)',
+          }"
+        >
+          <li v-for="url of imgList" :key="url" class="e-gallerie__fond">
+            <img :src="url" class="e-gallerie__image" />
+          </li>
+        </ul>
       </div>
-    <p class="e-progression">BARRE DE PROGRESSION</p>
+      <p class="e-progression">BARRE DE PROGRESSION</p>
       <button class="e-fullbutton">En savoir plus</button>
     </div>
     <div class="media">
       <h2>On parle de nous</h2>
       <div class="surligner"></div>
       <div class="e-media">
-      <div class="article">
-        <img class ="e-article__photo" src="imgs/sneakers.jpg" />
-        <h3>Le monde</h3>
-        <h4>Chaussures responsables !</h4>
-        <p>
-          Le Monde a parlé de nous ! Après avoir découvert nos chaussures
-          responsables, il ne pouvais pas ne pas parler de nous dans leur
-          journal ! Venez découvrir nos chaussures responsables en lisant
-          l'article ci-dessous !
-        </p>
-        <a
-          class="suite"
-          href="https://www.youtube.com/watch?v=Ogc-aqYavek&ab_channel=1Mvues"
-          >Lire la suite</a
-        >
-      </div>
-      <div class="article">
-        <img class ="e-article__photo" src="imgs/puma-618x449.jpg" />
-        <h3>Libération</h3>
-        <h4>La révolution de la chaussures !</h4>
-        <p>
-          Je suis un résumé d'article super intéressant qu'il va falloir
-          inventer car aujourd'hui je n'ai absolument aucune inspiration. J'ai
-          juste envie de manger parce que je suis une grosse daleuse. Il fait
-          moche et froid, ce matin j'ai du gratter le parebrise !
-        </p>
-        <a class="suite" href="https://youtu.be/dQw4w9WgXcQ">Lire la suite</a>
-      </div>
+        <div class="article">
+          <img class="e-article__photo" src="imgs/sneakers.jpg" />
+          <h3>Le monde</h3>
+          <h4>Chaussures responsables !</h4>
+          <p>
+            Le Monde a parlé de nous ! Après avoir découvert nos chaussures
+            responsables, il ne pouvais pas ne pas parler de nous dans leur
+            journal ! Venez découvrir nos chaussures responsables en lisant
+            l'article ci-dessous !
+          </p>
+          <a
+            class="suite"
+            href="https://www.youtube.com/watch?v=Ogc-aqYavek&ab_channel=1Mvues"
+            >Lire la suite</a
+          >
+        </div>
+        <div class="article">
+          <img class="e-article__photo" src="imgs/puma-618x449.jpg" />
+          <h3>Libération</h3>
+          <h4>La révolution de la chaussures !</h4>
+          <p>
+            Je suis un résumé d'article super intéressant qu'il va falloir
+            inventer car aujourd'hui je n'ai absolument aucune inspiration. J'ai
+            juste envie de manger parce que je suis une grosse daleuse. Il fait
+            moche et froid, ce matin j'ai du gratter le parebrise !
+          </p>
+          <a class="suite" href="https://youtu.be/dQw4w9WgXcQ">Lire la suite</a>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
-export default{
-  data(){
-    return{
-      imgList:["imgs/chaussure.png","imgs/chaussure_2.png","imgs/chaussure_3.png","imgs/chaussure_4.png","imgs/chaussure_5.png","imgs/chaussure.png","imgs/chaussure.png","imgs/chaussure_2.png","imgs/chaussure_3.png","imgs/chaussure_4.png","imgs/chaussure_5.png","imgs/chaussure.png","imgs/chaussure.png","imgs/chaussure_2.png","imgs/chaussure_3.png","imgs/chaussure_4.png","imgs/chaussure_5.png","imgs/chaussure.png","imgs/chaussure.png","imgs/chaussure_2.png","imgs/chaussure_3.png","imgs/chaussure_4.png","imgs/chaussure_5.png","imgs/chaussure.png"]
-    }
-  }
-}
+export default {
+  data() {
+    return {
+      imgList: [
+        "imgs/chaussure.png",
+        "imgs/chaussure_2.png",
+        "imgs/chaussure_3.png",
+        "imgs/chaussure_4.png",
+        "imgs/chaussure_5.png",
+        "imgs/chaussure.png",
+        "imgs/chaussure.png",
+        "imgs/chaussure_2.png",
+        "imgs/chaussure_3.png",
+        "imgs/chaussure_4.png",
+        "imgs/chaussure_5.png",
+        "imgs/chaussure.png",
+        "imgs/chaussure.png",
+        "imgs/chaussure_2.png",
+        "imgs/chaussure_3.png",
+        "imgs/chaussure_4.png",
+        "imgs/chaussure_5.png",
+        "imgs/chaussure.png",
+        "imgs/chaussure.png",
+        "imgs/chaussure_2.png",
+        "imgs/chaussure_3.png",
+        "imgs/chaussure_4.png",
+        "imgs/chaussure_5.png",
+        "imgs/chaussure.png",
+      ],
+    };
+  },
+};
 
 /**/
 </script>
 
 <style lang="scss" scoped>
-
-
 // Titre
 
-h2{
+h2 {
   text-align: left;
   margin-left: 2em;
   margin-bottom: 0;
-  }
+}
 
-.surligner{
+.surligner {
   background-color: $colordarkpink;
   height: 0.2em;
   max-width: 10em;
@@ -114,21 +143,21 @@ h2{
 // Boutons
 
 .e-emptybutton {
-    font-family: $fontTexte;
-    font-weight: bold;
-    font-size: 16px;
-    color: $colordarkgreen;
-    background-color: white;
-    padding: 10px;
-    margin: 20px;
-    min-width: 220px;
-    border-radius: 28px;
-    border-width: 4px;
-    border-color: $colordarkgreen;
-    border-style: solid;
-    box-shadow: 1px 1px 5px 2px $colorshadow;
+  font-family: $fontTexte;
+  font-weight: bold;
+  font-size: 16px;
+  color: $colordarkgreen;
+  background-color: white;
+  padding: 10px;
+  margin: 20px;
+  min-width: 220px;
+  border-radius: 28px;
+  border-width: 4px;
+  border-color: $colordarkgreen;
+  border-style: solid;
+  box-shadow: 1px 1px 5px 2px $colorshadow;
 
-   /* @include small-up {
+  /* @include small-up {
         font-size: 12px;
     }
 
@@ -138,32 +167,31 @@ h2{
 
     */
 
-    &:hover {
-        cursor: pointer;
-        background-color: $colordarkgreen;
-        color: $colorwhite;
-        box-shadow: none;
-        transition: all ease-out 0.4s;
-    }
-
+  &:hover {
+    cursor: pointer;
+    background-color: $colordarkgreen;
+    color: $colorwhite;
+    box-shadow: none;
+    transition: all ease-out 0.4s;
+  }
 }
 
 .e-fullbutton {
-    font-family: $fontTexte;
-    font-weight: bold;
-    font-size: 16px;
-    color: $colorwhite;
-    background-color: $colordarkgreen;
-    padding: 10px;
-    margin: 20px;
-    min-width: 220px;
-    border-radius: 28px;
-    border-width: 4px;
-    border-color: $colordarkgreen;
-    border-style: solid;
-    box-shadow: 1px 1px 5px 2px $colorshadow;
+  font-family: $fontTexte;
+  font-weight: bold;
+  font-size: 16px;
+  color: $colorwhite;
+  background-color: $colordarkgreen;
+  padding: 10px;
+  margin: 20px;
+  min-width: 220px;
+  border-radius: 28px;
+  border-width: 4px;
+  border-color: $colordarkgreen;
+  border-style: solid;
+  box-shadow: 1px 1px 5px 2px $colorshadow;
 
-    /*@include small-up {
+  /*@include small-up {
         font-size: pxToRem(12);
     }
 
@@ -172,116 +200,115 @@ h2{
     }
     */
 
-    &:hover {
-        cursor: pointer;
-        box-shadow: none;
-        transition: all ease-out 0.4s;
-    }
+  &:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transition: all ease-out 0.4s;
+  }
 }
 
-// Nos valeurs 
+// Nos valeurs
 
-
-.c-valeurs{
+.c-valeurs {
   padding: 3em 2em;
 }
 
-.valeurs{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-bottom: 2em;
+.valeurs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-bottom: 2em;
 }
 
-.e-valeur{
-    display: flex;
-    flex-direction: column;
-    
+.e-valeur {
+  display: flex;
+  flex-direction: column;
 }
 
-.e-valeur__haut{
-    height: 15em;
-    width: 30em;
-    background: $colordarkpink;
-    border-top-left-radius: 20px;
-    border-top-right-radius:20px ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 1px 1px 5px 0px $colorshadow;
-
+.e-valeur__haut {
+  height: 15em;
+  width: 30em;
+  background: $colordarkpink;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 5px 0px $colorshadow;
 }
 
-.e-nosValeur-Img{
-    height: 4.5em;
+.e-nosValeur-Img {
+  height: 4.5em;
 }
 
-.e-valeur__bas{
-    width: 30em;
-    height: 3.5em;
-    text-align: center;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: #fff;
-    vertical-align: middle;
-    box-shadow: 0px 1px 5px 2px $colorshadow;
+.e-valeur__bas {
+  width: 30em;
+  height: 3.5em;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #fff;
+  vertical-align: middle;
+  box-shadow: 0px 1px 5px 2px $colorshadow;
 }
 
 // Notre communauté
 
-.products{
-  background-color: $colorgrey ;
+.products {
+  background-color: $colorgrey;
   padding: 3em 2em;
-  
 }
 
-ul{
+ul {
   margin: 0;
   padding: 0;
   display: grid;
   row-gap: 2em;
+  column-gap: 2em;
+  overflow-x: scroll;
 }
 
-li{
+li {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   list-style-type: none;
-}
-
-.e-gallerie__fond{
-  background-color:$colorwhite;
-  height: 13em;
-  width: 13em;
-  margin-bottom: 10px;
+  position: relative;
+  background-color: $colorwhite;
+  width: 100%;
+  aspect-ratio: 1/1;
   border-radius: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.e-gallerie__image{
-  position: absolute;
-  transform: translate(-67%, -130%);
-  max-width: 10em;
+.e-gallerie__image {
+  max-width: 90%;
+  width: 10em;
+  height: auto;
+  margin-top: 1.5em;
 }
 
-.e-progression{
+.e-progression {
   padding: 2em 0em;
 }
 
 // On parle de nous
 
-.media{
+.media {
   background-color: $colorturqoise;
   padding: 3em 2em 8em 2em;
 }
 
-.e-media{
+.e-media {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
 
-.article{
-  padding : 1em;
+.article {
+  padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -289,10 +316,9 @@ li{
   max-width: 30em;
 }
 
-.e-article__photo{
+.e-article__photo {
   max-width: 25em;
   max-height: 15em;
   border-radius: 2em;
 }
-
 </style>
