@@ -13,64 +13,58 @@
             <img class="e-logo__tictoc" src="imgs/icons8-tic-tac-50.png" />
           </div>
         </div>
-        <div class="e-footer__menu">
-          <div class="e-menu__1">
-            <h4 class="e-menu__h5">Votre compte</h4>
-            <ul class="e-menu__ul">
-              <li class="e-menu__text">
-                <router-link to="/profil" class="router"
-                  >Mon profil</router-link
-                >
-              </li>
-              <li class="e-menu__text">
-                <router-link to="/creation" class="router"
-                  >Mes créations</router-link
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="e-menu__2">
-            <h4 class="e-menu__h5">Baskin</h4>
-            <ul class="e-menu__ul">
-              <li class="e-menu__text">
-                <router-link to="/marque" class="router">La marque</router-link>
-              </li>
-              <li class="e-menu__text">
-                <router-link to="/perso" class="router">Ma paire</router-link>
-              </li>
-              <li class="e-menu__text">
-                <router-link to="/galerie" class="router"
-                  >La galerie</router-link
-                >
-              </li>
-              <li class="e-menu__text">
-                <router-link to="/contact" class="router">Contact</router-link>
-              </li>
-            </ul>
-          </div>
-          <div class="e_menu__3">
-            <h4 class="e-menu__h5">Informations</h4>
-            <ul class="e-menu__ul">
-              <li class="e-menu__text">
-                <router-link to="/cgu" class="router"
-                  >Condition général d'utilisation et de vente</router-link
-                >
-              </li>
-              <li class="e-menu__text">
-                <router-link to="/livraison" class="router"
-                  >Livraison</router-link
-                >
-              </li>
-              <li class="e-menu__text">
-                <router-link to="/mention" class="router"
-                  >Mentions légales</router-link
-                >
-              </li>
-              <li class="e-menu__text">
-                <router-link to="/plan" class="router">Plan HTML</router-link>
-              </li>
-            </ul>
-          </div>
+        <div class="e-menu">
+          <h4 class="e-menu__h5">Votre compte</h4>
+          <ul class="e-menu__ul">
+            <li class="e-menu__text">
+              <router-link to="/profil" class="router">Mon profil</router-link>
+            </li>
+            <li class="e-menu__text">
+              <router-link to="/creation" class="router"
+                >Mes créations</router-link
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="e-menu">
+          <h4 class="e-menu__h5">Baskin</h4>
+          <ul class="e-menu__ul">
+            <li class="e-menu__text">
+              <router-link to="/marque" class="router">La marque</router-link>
+            </li>
+            <li class="e-menu__text">
+              <router-link to="/perso" class="router">Ma paire</router-link>
+            </li>
+            <li class="e-menu__text">
+              <router-link to="/galerie" class="router">La galerie</router-link>
+            </li>
+            <li class="e-menu__text">
+              <router-link to="/contact" class="router">Contact</router-link>
+            </li>
+          </ul>
+        </div>
+        <div class="e-menu">
+          <h4 class="e-menu__h5">Informations</h4>
+          <ul class="e-menu__ul">
+            <li class="e-menu__text">
+              <router-link to="/cgu" class="router"
+                >Condition général d'utilisation et de vente</router-link
+              >
+            </li>
+            <li class="e-menu__text">
+              <router-link to="/livraison" class="router"
+                >Livraison</router-link
+              >
+            </li>
+            <li class="e-menu__text">
+              <router-link to="/mention" class="router"
+                >Mentions légales</router-link
+              >
+            </li>
+            <li class="e-menu__text">
+              <router-link to="/plan" class="router">Plan HTML</router-link>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="e-footer__infos">
@@ -101,8 +95,7 @@
 
 
 <style lang="scss" scoped>
-
-footer{
+footer {
   padding-top: 4em;
 }
 .e-footer {
@@ -110,7 +103,8 @@ footer{
   background-color: $colordarkgreen;
   position: relative;
   /*margin-top: calc(var(--separator-height) + 64px);*/
-  padding: 2em 5em;
+  padding: 2em 24px;
+  padding-top: 5em;
   &::before {
     display: block;
     content: "";
@@ -124,54 +118,49 @@ footer{
     border-right: 100vw solid transparent;
     background-color: transparent;
     box-sizing: border-box;
-    
   }
 }
 
 .e-footer__1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 3fr repeat(3, 1fr);
+  column-gap: 5em;
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2.3em;
+    row-gap: 4em;
+    /* align-items: center; */
+    /* justify-items: center; */
+  }
 }
 
 .e-footer__logo {
-  margin-left: 7em;
-  position: relative;
 }
 
 .e-logo__logo {
-  max-height: 20em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
 }
 
 .e-logo__icons {
-  margin-bottom: 2em;
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 2em;
   display: flex;
-  flex-direction: row;
-}
-
-.e-logo__facebook {
-  max-height: 2.5em;
-}
-
-.e-logo__instagram {
-  max-height: 2.5em;
-}
-
-.e-logo__tictoc {
-  max-height: 2.5em;
+  justify-content: center;
+  img {
+    width: 25%;
+    max-width: 32px;
+    aspect-ratio: 1/1;
+  }
 }
 
 .e-footer__menu {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+  column-gap: 5em;
+  row-gap: 4em;
 }
 
 .e-menu__text {
@@ -191,19 +180,8 @@ footer{
   padding: 0;
 }
 
-.e-menu__1 {
+.e-menu {
   text-align: left;
-  padding-right: 5em;
-}
-
-.e-menu__2 {
-  text-align: left;
-  padding-right: 5em;
-}
-
-.e_menu__3 {
-  text-align: left;
-  padding-right: 5em;
 }
 
 .e-menu__h5 {
@@ -219,6 +197,7 @@ footer{
   flex-direction: row;
   align-items: center;
   justify-content: right;
+  margin-top: 2em;
 }
 
 .e-info__2 {

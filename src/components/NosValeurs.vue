@@ -26,13 +26,12 @@
       <br />
       Ces valeurs tournent autour de l'écologie et la qualité.
     </p>
-    <button class="e-emptybutton">En savoir plus</button>
+    <button class="whiteFilledBtn">En savoir plus</button>
   </div>
 </template>
 <script>
 </script>
 <style lang="scss" scoped>
-
 // Nos valeurs
 
 .c-valeurs {
@@ -80,40 +79,6 @@
   background-color: #fff;
   vertical-align: middle;
 }
-
-// Boutons
-
-.e-emptybutton {
-  font-family: $fontTexte;
-  font-weight: bold;
-  font-size: 16px;
-  color: $colordarkgreen;
-  background-color: transparent;
-  padding: 10px;
-  margin: 20px;
-  min-width: 220px;
-  border-radius: 28px;
-  border-width: 4px;
-  border-color: $colordarkgreen;
-  border-style: solid;
-  box-shadow: 1px 1px 5px 2px $colorshadow;
-
-  @include small-up {
-    cursor: pointer;
-    background-color: $colordarkgreen;
-    color: $colorwhite;
-    box-shadow: none;
-    transition: all ease-out 0.4s;
-  }
-  &:hover {
-    cursor: pointer;
-    background-color: $colordarkgreen;
-    color: $colorwhite;
-    box-shadow: none;
-    transition: all ease-out 0.4s;
-  }
-}
-
 
 //Elements
 

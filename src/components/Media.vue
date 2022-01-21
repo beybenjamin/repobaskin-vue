@@ -43,11 +43,15 @@
 .media {
   background-color: $colorturqoise;
   padding: 3em 2em 0em 2em;
+  padding-bottom: 150px;
+  margin-bottom: -100px;
 }
 
 .e-media {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
+  row-gap: 24px;
   justify-content: space-around;
 }
 

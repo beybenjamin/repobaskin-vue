@@ -9,13 +9,23 @@
             'repeat(' + Math.ceil(imgList.length / 2) + ',13em)',
         }"
       >
-        <li v-for="url of imgList" :key="url" class="e-gallerie__fond">
-          <img :src="url" class="e-gallerie__image" />
+        <li v-for="(img, i) of imgList" :key="i" class="e-gallerie__fond">
+          <img :src="img.url" class="e-gallerie__image" />
+          <svg
+            @click="likeUrl(i)"
+            class="e-heart"
+            :class="{ active: img.liked }"
+            viewBox="0 0 32 29.6"
+          >
+            <path
+              stroke-width="2"
+              d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"
+            />
+          </svg>
         </li>
       </ul>
     </div>
-    <p class="e-progression">BARRE DE PROGRESSION</p>
-    <button class="e-emptybutton">En savoir plus</button>
+    <button class="whiteFilledBtn">En savoir plus</button>
   </div>
 </template>
 <script>
@@ -23,37 +33,41 @@ export default {
   data() {
     return {
       imgList: [
-        "imgs/chaussure.png",
-        "imgs/chaussure_2.png",
-        "imgs/chaussure_3.png",
-        "imgs/chaussure_4.png",
-        "imgs/chaussure_5.png",
-        "imgs/chaussure.png",
-        "imgs/chaussure.png",
-        "imgs/chaussure_2.png",
-        "imgs/chaussure_3.png",
-        "imgs/chaussure_4.png",
-        "imgs/chaussure_5.png",
-        "imgs/chaussure.png",
-        "imgs/chaussure.png",
-        "imgs/chaussure_2.png",
-        "imgs/chaussure_3.png",
-        "imgs/chaussure_4.png",
-        "imgs/chaussure_5.png",
-        "imgs/chaussure.png",
-        "imgs/chaussure.png",
-        "imgs/chaussure_2.png",
-        "imgs/chaussure_3.png",
-        "imgs/chaussure_4.png",
-        "imgs/chaussure_5.png",
-        "imgs/chaussure.png",
+        { url: "imgs/chaussure.png", liked: false },
+        { url: "imgs/chaussure_2.png", liked: false },
+        { url: "imgs/chaussure_3.png", liked: false },
+        { url: "imgs/chaussure_4.png", liked: false },
+        { url: "imgs/chaussure_5.png", liked: false },
+        { url: "imgs/chaussure.png", liked: false },
+        { url: "imgs/chaussure.png", liked: false },
+        { url: "imgs/chaussure_2.png", liked: false },
+        { url: "imgs/chaussure_3.png", liked: false },
+        { url: "imgs/chaussure_4.png", liked: false },
+        { url: "imgs/chaussure_5.png", liked: false },
+        { url: "imgs/chaussure.png", liked: false },
+        { url: "imgs/chaussure.png", liked: false },
+        { url: "imgs/chaussure_2.png", liked: false },
+        { url: "imgs/chaussure_3.png", liked: false },
+        { url: "imgs/chaussure_4.png", liked: false },
+        { url: "imgs/chaussure_5.png", liked: false },
+        { url: "imgs/chaussure.png", liked: false },
+        { url: "imgs/chaussure.png", liked: false },
+        { url: "imgs/chaussure_2.png", liked: false },
+        { url: "imgs/chaussure_3.png", liked: false },
+        { url: "imgs/chaussure_4.png", liked: false },
+        { url: "imgs/chaussure_5.png", liked: false },
+        { url: "imgs/chaussure.png", liked: false },
       ],
     };
+  },
+  methods: {
+    likeUrl(photoIndex) {
+      this.imgList[photoIndex].liked = !this.imgList[photoIndex].liked;
+    },
   },
 };
 </script>
 <style lang="scss" scoped>
-
 // Communauté
 
 .products {
@@ -68,6 +82,8 @@ ul {
   row-gap: 2em;
   column-gap: 2em;
   overflow-x: scroll;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 li {
@@ -82,6 +98,20 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  svg {
+    fill: white;
+    stroke: $colordarkpink;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    transition: all ease 0.18s;
+    &:hover,
+    &.active {
+      fill: $colordarkpink;
+      cursor: pointer;
+    }
+  }
 }
 
 .e-gallerie__image {
@@ -96,71 +126,6 @@ li {
 }
 
 // Bouton
-
-.e-emptybutton {
-  font-family: $fontTexte;
-  font-weight: bold;
-  font-size: 16px;
-  color: $colordarkgreen;
-  background-color: transparent;
-  padding: 10px;
-  margin: 20px;
-  min-width: 220px;
-  border-radius: 28px;
-  border-width: 4px;
-  border-color: $colordarkgreen;
-  border-style: solid;
-  box-shadow: 1px 1px 5px 2px $colorshadow;
-
-  /* @include small-up {
-        font-size: 12px;
-    }
-
-    @include medium-up {
-        font-size: 16px;
-    }
-
-    */
-
-  &:hover {
-    cursor: pointer;
-    background-color: $colordarkgreen;
-    color: $colorwhite;
-    box-shadow: none;
-    transition: all ease-out 0.4s;
-  }
-}
-
-.e-fullbutton {
-  font-family: $fontTexte;
-  font-weight: bold;
-  font-size: 16px;
-  color: $colorwhite;
-  background-color: $colordarkgreen;
-  padding: 10px;
-  margin: 20px;
-  min-width: 220px;
-  border-radius: 28px;
-  border-width: 4px;
-  border-color: $colordarkgreen;
-  border-style: solid;
-  box-shadow: 1px 1px 5px 2px $colorshadow;
-
-  /*@include small-up {
-        font-size: pxToRem(12);
-    }
-
-    @include medium-up {
-        font-size: pxToRem(18)
-    }
-    */
-
-  &:hover {
-    cursor: pointer;
-    box-shadow: none;
-    transition: all ease-out 0.4s;
-  }
-}
 
 //Elements
 
