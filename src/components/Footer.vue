@@ -101,6 +101,10 @@
 
 
 <style lang="scss" scoped>
+
+footer{
+  padding-top: 4em;
+}
 .e-footer {
   --separator-height: 50px;
   background-color: $colordarkgreen;
@@ -120,6 +124,7 @@
     border-right: 100vw solid transparent;
     background-color: transparent;
     box-sizing: border-box;
+    
   }
 }
 

@@ -42,7 +42,7 @@
 
 .media {
   background-color: $colorturqoise;
-  padding: 3em 2em 8em 2em;
+  padding: 3em 2em 0em 2em;
 }
 
 .e-media {
