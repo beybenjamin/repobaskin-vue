@@ -15,7 +15,7 @@
       </ul>
     </div>
     <p class="e-progression">BARRE DE PROGRESSION</p>
-    <button class="e-fullbutton">En savoir plus</button>
+    <button class="e-emptybutton">En savoir plus</button>
   </div>
 </template>
 <script>
@@ -102,7 +102,7 @@ li {
   font-weight: bold;
   font-size: 16px;
   color: $colordarkgreen;
-  background-color: white;
+  background-color: transparent;
   padding: 10px;
   margin: 20px;
   min-width: 220px;
