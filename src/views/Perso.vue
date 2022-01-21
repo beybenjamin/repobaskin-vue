@@ -71,6 +71,7 @@ import
     align-items: center;
     margin-top: 0 ;
     margin-bottom: 0;
+    justify-content: center;
     
 &__item {
     margin-left: 1rem;
@@ -99,8 +100,11 @@ import
     display: flex; 
     padding: 1rem; 
     align-items: center;
-    margin-top: 0 ;
+    margin-top: 150px ;
     margin-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    justify-content: center;
     list-style: none;
 
     /*&__ColorActif{
