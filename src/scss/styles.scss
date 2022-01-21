@@ -20,7 +20,7 @@
 
 
 html {
-    font-size: $rootfontSize + px;
+    font-size: calc($rootfontSize + 0.85vmin);
 }
 
 h2 {
