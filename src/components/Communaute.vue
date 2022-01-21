@@ -164,12 +164,6 @@ li {
 
 //Elements
 
-h2 {
-  text-align: left;
-  margin-left: 2em;
-  margin-bottom: 0;
-}
-
 .surligner {
   background-color: $colordarkpink;
   height: 0.2em;
