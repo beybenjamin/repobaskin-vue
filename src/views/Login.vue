@@ -62,8 +62,10 @@ export default {
         .then((response) => {
           if (response.status === 200) {
             this.success = true;
+            console.log('ALO', response.data.data.token)
 
             this.$store.commit("setUser", {
+              userid: response.data.data.id,
               username: response.data.data.displayName,
               email: response.data.data.email,
               authToken: response.data.data.token,
