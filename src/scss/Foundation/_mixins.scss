@@ -1,0 +1,17 @@
+@mixin title {
+    font-weight: bold;
+    font-family: 'Decoy', 'Arial';
+}
+
+@mixin small-up{
+    @media all and (min-width : 640px){
+        @content;
+    }
+    
+}
+
+@mixin medium-up{
+    @media all and (min-width : 641px){
+        @content;
+    }
+}
