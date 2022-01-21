@@ -15,3 +15,18 @@
         @content;
     }
 }
+
+@mixin aspect-ratio($ratio-or-width, $height: null) {
+    $padding: if($height, percentage($height/$ratio-or-width), percentage(1/$ratio-or-width));
+    &:before {
+      content: '';
+      display: block;
+      float: left;
+      padding-bottom: $padding;
+    }
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
