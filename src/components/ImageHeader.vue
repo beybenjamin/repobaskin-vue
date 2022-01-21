@@ -12,7 +12,7 @@
 <style lang="scss" scoped>
 
 .c-div__image{
-    height: 150em;
+    height: 40em;
     width: 100vm;
     overflow: hidden;
 }
@@ -33,7 +33,16 @@
 }
 
 .e-marque__titre{
-
+  font-size: 60px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 </style>
