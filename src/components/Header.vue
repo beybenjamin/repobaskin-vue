@@ -32,6 +32,50 @@
     <p>Bonjour, {{ user.displayName }}</p>
     <p>{{ user.email }}</p>
   </div>
+  <div>
+    <label for="Nom" class="form__label"
+          >Nom*
+          <input type="text" name="Nom" id="Nom" required />
+        </label>
+      </div>
+      <div class="form__div">
+        <label for="Prénom" class="form__label"
+          >Prénom*
+          <input type="text" name="Prénom" id="Prénom" required />
+        </label>
+      </div>
+      <div class="form__div">
+        <label for="Surnom" class="form__label"
+          >Surnom*
+          <input type="text" name="Surnom" id="Surnom" required />
+        </label>
+      </div>
+      <div class="form__div">
+        <label for="Mail" class="form__label"
+          >Mail*
+          <input type="email" name="Nom" id="Nom" required />
+        </label>
+      </div>
+      <div class="form__div">
+        <label for="MotdePasse" class="form__label"
+          >Mot de Passe*
+          <input type="password" name="MotdePasse" id="MotdePasse" required />
+        </label>
+      </div>
+      <div class="form__div">
+        <label for="ConfirmerMdp" class="form__label"
+          >Confirmer le mot de passe*
+          <input
+            type="password"
+            name="ConfirmerMdp"
+            id="ConfirmerMdp"
+            required
+          />
+        </label>
+      </div>
+      <button class="e-fullbutton">Sauvegarder</button>
+    </form>
+  </div>
 </template>
 
 <script>

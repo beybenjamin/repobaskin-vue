@@ -4,6 +4,10 @@
       <!--Ici mettre la vidéo et le bouton "Je créer ma paire"-->
     </div>
     <div>
+      <PopUp/>
+    </div>
+  
+    <div>
       <NosValeurs />
     </div>
     <div>
