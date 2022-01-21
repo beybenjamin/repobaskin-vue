@@ -2,21 +2,19 @@
   <div id="app">
     <Header />
 
-    
-    <router-view/>
+    <router-view />
 
     <Footer />
   </div>
 </template>
 
 <script>
-import Header from "@/components/Header.vue"
-import Footer from "@/components/Footer.vue"
-
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
-  components: {Header, Footer}
-}
+  components: { Header, Footer },
+};
 </script>
 
 
@@ -43,7 +41,7 @@ export default {
   }
 }
 
-body{
+body {
   margin: 0;
 }
 </style>

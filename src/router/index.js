@@ -5,8 +5,7 @@ import Accueil from '../views/Accueil.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'Accueil',
     component: Accueil
@@ -17,60 +16,69 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import( /* webpackChunkName: "about" */ '../views/About.vue')
   },
 
-  {path: '/cgu',
-  name: 'Cgu',
-  component: () => import('../views/Cgu.vue')
-
-  },
-
-  {path: '/register',
-  name: 'Register',
-  component: () => import('../views/Register.vue')
+  {
+    path: '/cgu',
+    name: 'Cgu',
+    component: () => import('../views/Cgu.vue')
 
   },
 
-  {path: '/profil',
-  name: 'Profil',
-  component: () => import('../views/Profil.vue')
+  {
+    path: '/register',
+    name: 'Register',
+    component: () => import('../views/Register.vue')
 
   },
 
-  {path: '/login',
-  name: 'Login',
-  component: () => import('../views/Login.vue')
+  {
+    path: '/profil',
+    name: 'Profil',
+    component: () => import('../views/Profil.vue')
 
   },
 
-  {path: '/contact',
-  name: 'Contact',
-  component: () => import('../views/Contact.vue')
+  {
+    path: '/login',
+    name: 'Login',
+    component: () => import('../views/Login.vue')
 
   },
 
-  {path: '/galerie',
-  name: 'Galerie',
-  component: () => import('../views/Galerie.vue')
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('../views/Contact.vue')
 
   },
 
-  {path: '/accueil',
-  name: 'Accueil',
-  component: () => import('../views/Accueil.vue')
+  {
+    path: '/galerie',
+    name: 'Galerie',
+    component: () => import('../views/Galerie.vue')
 
   },
 
-  {path: '/marque',
-  name: 'Marque',
-  component: () => import('../views/Marque.vue')
+  {
+    path: '/accueil',
+    name: 'Accueil',
+    component: () => import('../views/Accueil.vue')
 
   },
 
-  {path: '/perso',
-  name: 'Perso',
-  component: () => import('../views/Perso.vue')
+  {
+    path: '/marque',
+    name: 'Marque',
+    component: () => import('../views/Marque.vue')
+
+  },
+
+  {
+    path: '/perso',
+    name: 'Perso',
+    component: () => import('../views/Perso.vue')
 
   }
 ]

@@ -29,20 +29,19 @@
         </li>
       </ul>
     </div>
-    <p>Bonjour, {{user.displayName}}</p>
-        <p>{{user.email}}</p>
+    <p>Bonjour, {{ user.displayName }}</p>
+    <p>{{ user.email }}</p>
   </div>
 </template>
 
 <script>
-
 export default {
   computed: {
     user() {
-      return this.$store.state.user
-    }
-  }
-}
+      return this.$store.state.user;
+    },
+  },
+};
 </script>
 
 
@@ -91,7 +90,7 @@ export default {
   }
 }
 
-.router{
+.router {
   text-decoration: none;
   color: $colorwhite;
   font-size: 16px;
