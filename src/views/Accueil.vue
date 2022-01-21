@@ -25,18 +25,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// Titre
 
-h2 {
-  text-align: left;
-  margin-left: 2em;
-  margin-bottom: 0;
-}
-
-.surligner {
-  background-color: $colordarkpink;
-  height: 0.2em;
-  max-width: 10em;
-  margin-bottom: 4em;
-}
 </style>

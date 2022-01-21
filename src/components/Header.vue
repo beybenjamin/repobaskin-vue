@@ -60,6 +60,7 @@ export default {
   padding: 0 50px;
   box-shadow: 3px 3px 15px 2px $colorshadow;
   box-sizing: border-box;
+
 }
 
 .e-logo {

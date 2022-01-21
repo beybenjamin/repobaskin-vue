@@ -1,4 +1,4 @@
-<template>
+ <template>
   <footer>
     <div class="e-footer">
       <div class="e-footer__1">
@@ -238,3 +238,4 @@
   color: $colorshoeswhite;
 }
 </style>
+ 
