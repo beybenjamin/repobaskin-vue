@@ -1,0 +1,54 @@
+
+// Foundations
+@import "/vars";
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import "Foundation/mixins";
+@import "Foundation/functions";
+*{
+    margin:0;
+    padding:0;
+}
+
+// Objects
+
+@import "objects/grid";
+
+// Elements
+@import "Elements/bouton";
+@import "Elements/nosValeurs.scss";
+@import "Components/Perso_clist";
+@import "Components/header";
+@import "Elements/formulaire.scss";
+@import "Elements/cgu.scss";
+
+html{
+    font-size: $rootfontSize + px;
+}
+
+h2 {
+    color : $colordarkgreen;
+    font-family: $fontTitle;
+    
+    @include title;
+    @include small-up {
+        font-size: pxToRem(12);        
+    }
+    @include medium-up{
+        font-size: pxToRem(35)    }
+
+    text-decoration: underline;
+        text-underline-position: right;
+        text-decoration-color: $colordarkpink;
+}
+
+p{
+    color: $colordarkgreen;
+    font-family: $fontTexte
+}
+
+@import "components/product";

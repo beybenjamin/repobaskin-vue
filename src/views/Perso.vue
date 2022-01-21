@@ -37,8 +37,9 @@
 
 <style lang="scss" scoped>
 
-.e-perso__icon {
-   padding-top: 0;
+.e-perso__icon{
+   width: 20%;
 }
+
 
 </style>
