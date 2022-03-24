@@ -16,28 +16,29 @@
       </p>
     </div>
     <div class="c-formulaire_div">
-      <h3>Formulaire de contact</h3>
-      <p>* champs obligatoires</p>
+      <p><b>*</b> champs obligatoires</p>
       <form method="post">
         <div class="e-formulaire_div">
-          <p>* Votre nom</p>
+          <p><b>*</b> Votre nom</p>
+          <input type="text" name="Nom" />
+        </div>
+        <div class="e-formulaire_div">
+          <p><b>*</b> Votre prénom</p>
           <input type="text" name="Prénom" />
         </div>
         <div class="e-formulaire_div">
-          <p>* Votre prénom</p>
-          <input type="text" name="Prénom" />
+          <p><b>*</b> Votre adresse mail</p>
+          <input type="text" name="Mail" />
         </div>
         <div class="e-formulaire_div">
-          <p>* Votre adresse mail</p>
-          <input type="text" name="Prénom" />
+          <p><b>*</b> Object du message</p>
+          <input type="text" name="Object" />
         </div>
         <div class="e-formulaire_div">
-          <p>* Object du message</p>
-          <input type="text" name="Prénom" />
-        </div>
-        <div class="e-formulaire_div">
-          <p>* Votre message</p>
-          <input type="text" name="Prénom" />
+          <p><b>*</b> Votre message
+           <textarea name="Commentaires" cols="30" rows="5" >
+           </textarea>
+        </p>
         </div>
         <button class="e-fullbutton">Envoyer</button>
       </form>
@@ -72,5 +73,95 @@
 
 
 <style lang="scss" scoped>
+
+</style>
+
+<style lang="scss" scoped>
+
+.gallerie__fond {
+}
+
+.titre {
+  font-size: 60px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.e-paragraphe{
+  text-align: left;
+  padding-left: 40%;
+  padding-top: 5%;
+}
+
+.c-formulaire_div{
+  padding-top: 5%;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.c-formulaire_div p{
+  padding-top: 3%;
+  font-weight: bold;
+}
+
+.c-formulaire_div p b {
+  color: red;
+}
+
+form {
+  width: 400px;
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 10px;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+}
+
+input, textarea {
+  font: 1em sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+  border-color: #000;
+}
+
+textarea {
+  vertical-align: top;
+  height: 5em;
+}
+
+.c-map-div{
+  padding-top: 20px;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.e-adresse{
+  padding-top: 5px;
+  text-align: left;
+}
+
+.e-phone{
+  padding-top: 5px;
+  text-align: left;
+}
 
 </style>
