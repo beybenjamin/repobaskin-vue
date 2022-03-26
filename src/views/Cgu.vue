@@ -34,9 +34,9 @@
       <h2 class="e-cgutitre_h2">
         SECTION 1:
       </h2>
-      <p class="e-cgusoustitre_p">
+      <h2 class="e-cgusoustitre_h2">
         Les Conditions Générales d'Utilisation
-      </p>
+      </h2>
 
       <h3 class="e-cgutitre_h3">Article 1 : À propos du site web</h3>
       <p class="e-cgucontenu_p">
@@ -152,9 +152,9 @@
       <h2 class="e-cgutitre_h2">
         SECTION 2 :
       </h2>
-      <p class="e-cgusoustitre_p">
+      <h2 class="e-cgusoustitre_h2">
         Conditions générales de vente
-      </p>
+      </h2>
       <h3 class="e-cgutitre_h3">Article 1 : Objet</h3>
       <p class="e-cgucontenu_p">
         Les présentes conditions régissent les ventes par la société BASKIN – 5
@@ -384,11 +384,18 @@
 
 <style lang="scss" scoped>
   h2 {
-    text-align: left;
+    padding-left: 0%;
   }
 
   h3 {
     text-align: left;
+    padding-top: 2%;
+    padding-bottom: 1%;
+  }
+
+  .e-cgusoustitre_h2{
+    font-size: 20px;
+    padding-left: 4.3%;
   }
   
   p {
