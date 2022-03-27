@@ -18,7 +18,7 @@
           <router-link to="/perso" class="router">Ma paire</router-link>
         </li>
         <li class="e-menu__li">
-          <a href="#" id="e-menu__img"
+          <a href="/profil" id="e-menu__img"
             ><img src="/imgs/icon_profil.png" alt=""
           /></a>
         </li>

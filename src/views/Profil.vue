@@ -1,214 +1,66 @@
 <template>
-  <div class="profil">
-    <div class="e-titre">
-      <p>Bienvenue à toi Théo,</p>
-      <p>Nous sommes ravis de te retrouver</p>
-    </div>
-    <div class="c-monProfil">
-      <div class="c-contenu">
-        <div class="c-introduction">
-          <h3 class="c-introduction__h3">Mon profil</h3>
-          <p>Ici tu vas pouvoir modifier tes informations personnels.</p>
-          <p>Nous te promettons de les garder rien que pour nous.</p>
-        </div>
-        <div class="c-photo">
-          <div class="e-photo">
-            <img class="e-photo__img" src="#" alt="Photo d'un jeune homme" />
-          </div>
-          <button class="e-fullbutton">Modifier la photo</button>
-          <button class="e-emptybutton">Supprimer la photo</button>
-        </div>
-        <div class="c-formulaire">
-          <form class="e-formulaire" method="post">
-            <ul>
-              <li class="e-formlist">
-                <p class="e-formlist__titre">Prénom</p>
-                <input class="e-formlist__input" type="text" name="Prénom" />
-              </li>
-              <li class="e-formlist">
-                <p class="e-formlist__titre">Nom</p>
-                <input class="e-formlist__input" type="text" name="Nom" />
-              </li>
-              <li class="e-formlist">
-                <p class="e-formlist__titre">Pseudo</p>
-                <input class="e-formlist__input" type="text" name="Pseudo" />
-              </li>
-              <li class="e-formlist">
-                <p class="e-formlist__titre">E-mail</p>
-                <input class="e-formlist__input" type="text" name="E-mail" />
-              </li>
-              <li class="e-formlist">
-                <p class="e-formlist__titre">Téléphone</p>
-                <input class="e-formlist__input" type="text" name="Téléphone" />
-              </li>
-            </ul>
-          </form>
-          <button class="e-emptybutton">Sauvegarder</button>
-        </div>
+  <div class="page-container">
+    <nav>
+      <ul>
+        <li :class="{ active: activeTab === 0 }" @click="activeTab = 0">
+          Mon Profil
+        </li>
+        <li :class="{ active: activeTab === 1 }" @click="activeTab = 1">
+          Mot de passe
+        </li>
+        <li :class="{ active: activeTab === 2 }" @click="activeTab = 2">
+          Adresse de livraison
+        </li>
+        <li :class="{ active: activeTab === 3 }" @click="activeTab = 3">
+          Mes précommandes
+        </li>
+        <li :class="{ active: activeTab === 4 }" @click="activeTab = 4">
+          Mes créations
+        </li>
+      </ul>
+    </nav>
+    <div class="profil">
+      <div class="e-titre">
+        <p>Bienvenue à toi Théo,</p>
+        <p>Nous sommes ravis de te retrouver</p>
       </div>
-    </div>
-    <div class="c-motDePasse">
-      <div class="c-contenu">
-        <div class="c-introduction">
-          <h3 class="c-introduction_h3">Mot de Passe</h3>
-          <p>Ici tu vas pouvoir modifier ton mot de passe</p>
-          <p>Ne l'oublie surtout pas !</p>
-        </div>
-        <div class="c-formulaire">
-          <form method="post">
-            <ul>
-              <li class="e-formlist">
-                <p class="e-formlist__titre">Mot de passe actuel</p>
-                <input class="e-formlist__input" type="text" name="MDPactuel" />
-              </li>
-              <li class="e-formlist">
-                <p class="e-formlist__titre">Nouveau mot de passe</p>
-                <input class="e-formlist__input" type="text" name="NvMDP" />
-              </li>
-              <div class="e-formlist">
-                <p class="e-formlist__titre">Retaper le mot de passe</p>
-                <input
-                  class="e-formlist__input"
-                  type="text"
-                  name="RetaperMDP"
-                />
-              </div>
-            </ul>
-          </form>
-          <button class="e-emptybutton">Sauvegarder</button>
-        </div>
-      </div>
-    </div>
-    <div class="c-adresseDeLivraison">
-      <div class="c-contenu">
-        <div class="c-introduction">
-          <h3 class="c-introduction_h3">Adresse de livraison</h3>
-          <p>Ici tu vas pouvoir modifier tes adresses de livraisons</p>
-        </div>
-        <div class="">
-          <button class="e-emptybutton">Ajouter une adresse</button>
-          <div class="e-rubrique">
-            <div class="e-rubrique__haut">
-              <div>
-                <p>Théo Legrand</p>
-              </div>
-              <div>
-                <p>Adresse par défaut</p>
-              </div>
-            </div>
-            <div class="e-rubrique__bas">
-              <p>36 rue de la Liberté</p>
-              <br />
-              <p>Montbéliard, Franche-Comté, 25200</p>
-              <br />
-              <p>France</p>
-              <br />
-            </div>
-            <button class="e-emptybutton">Modifier</button>
-            <button class="e-emptybutton">Effacer</button>
-          </div>
-          <div class="e-rubrique">
-            <div class="e-rubrique__haut">
-              <div>
-                <p>Théo Legrand</p>
-              </div>
-            </div>
-            <div class="e-rubrique__bas">
-              <p>86 rue de la Concorde</p>
-              <br />
-              <p>Lens, Haut de France, 62300</p>
-              <br />
-              <p>France</p>
-              <br />
-            </div>
-            <button class="e-emptybutton">Modifier</button>
-            <button class="e-emptybutton">Effacer</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="c-ajouterUneAdresse">
-      <div class="c-contenu">
-        <div class="c-introduction">
-          <h3 class="c-introduction_h3">Ajouter une adresse de livraison</h3>
-          <p>Ici tu vas pouvoir ajouetr une nouvelle adresse de livraison</p>
-        </div>
-        <button class="e-emptybutton">Utiliser l'emplacement actuel</button>
-        <div class="c-formulaire">
-          <form method="post">
-            <ul>
-              <li class="e-formlist__adresse">
-                <p class="e-formlist__titre">Adresse</p>
-                <input class="e-formlist__input" type="text" name="Adresse" />
-                <input class="e-formlist__input" type="text" name="Adresse" />
-              </li>
-              <li class="e-formlist">
-                <p class="e-formlist__titre">Code postal</p>
-                <input
-                  class="e-formlist__input"
-                  type="text"
-                  name="Code postal"
-                />
-              </li>
-              <li class="e-formlist">
-                <p class="e-formlist__titre">Ville</p>
-                <input class="e-formlist__input" type="text" name="Ville" />
-              </li>
-            </ul>
-          </form>
-          <input type="checkbox" id="e-chexbox" name="Défaut" />
-          <label for="e-chexbox"
-            >Faire de cette adresse mon adresse par défaut</label
-          ><br />
-          <button class="e-emptybutton">Ajouter</button>
-        </div>
-      </div>
-    </div>
-    <div class="c-mesPrecommandes">
-      <div class="c-contenu">
-        <div class="c-introduction">
-          <h3 class="c-introduction_h3">Mes précommandes</h3>
-          <p>Ici tu vas pouvoir retrouver toutes tes précommandes</p>
-        </div>
-        <div class="c-précommandes">
-          <div class="e-chaussures">
-            <img src="#" alt="Photo d'une basquette" />
-          </div>
-          <div class="e-informations">
-            <p><strong>Nom de la basket</strong></p>
-            <p>La Bask'It</p>
-            <p><strong>Taille de la basket</strong></p>
-            <p>40</p>
-            <p><strong>Date de livraison estimé</strong></p>
-            <p>janvier 2022</p>
-          </div>
-          <button class="e-emptybutton">Télécharger la facture</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="shoes-list">
-      <h1>liste des chaussures</h1>
-      <div v-for="shoe in shoes" :key="shoe.id" class="shoe">
-        <p>{{ shoe.title.rendered }}</p>
-        <img :src="shoe.acf.image_url" alt="" />
-      </div>
+      <ProfilMonProfil v-if="activeTab === 0" />
+      <ProfilMdp v-if="activeTab === 1" />
+      <ProfilAdresseLivraison v-if="activeTab === 2" />
+      <ProfilPrecommandes v-if="activeTab === 3" />
+      <ProfilCreations v-if="activeTab === 4" />
     </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import ProfilMonProfil from "../components/ProfilMonProfil.vue";
+import ProfilMdp from "../components/ProfilMdp.vue";
+import ProfilAdresseLivraison from "../components/ProfilAdresseLivraison.vue";
+import ProfilPrecommandes from "../components/ProfilPrecommandes.vue";
+import ProfilCreations from "../components/ProfilCreations.vue";
+
 export default {
+  components: {
+    ProfilMonProfil,
+    ProfilMdp,
+    ProfilAdresseLivraison,
+    ProfilPrecommandes,
+    ProfilCreations,
+  },
   data() {
     return {
       shoes: [],
+      activeTab: 0,
     };
   },
 
   created() {
     axios
-      .get(`https://sitebaskin.benjaminbey.fr/wp-json/wp/V2/chaussures?author=${this.$store.state.user.id}`)
+      .get(
+        `https://sitebaskin.benjaminbey.fr/wp-json/wp/V2/chaussures?author=${this.$store.state.user.id}`
+      )
       .then((response) => {
         console.log(response.data);
         this.shoes = response.data;
@@ -219,3 +71,120 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="scss">
+.page-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  nav {
+    position: relative;
+    top: -50px;
+    height: calc(100% + 50px + 50px);
+
+    background-color: $colorgrey;
+    padding-top: 168px;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      row-gap: 24px;
+      margin-left: 24px;
+      li {
+        margin: 0;
+        padding-bottom: 2px;
+        text-align: left;
+        font-size: 1.15em;
+        color: $colordarkgreen;
+        width: max-content;
+        transition: all ease 230ms;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          display: block;
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          width: 100%;
+          left: -100%;
+          transition: all ease 230ms;
+          height: 2px;
+          background-color: $colordarkpink;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:hover,
+        &.active {
+          font-weight: bold;
+
+          &::before {
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.profil {
+  padding-top: 48px;
+  max-width: 880px;
+  min-width: 80%;
+  margin: auto;
+  .e-titre {
+    font-family: roboto;
+    font-size: 1.6em;
+    text-align: center;
+    margin-bottom: 24px;
+    p {
+      text-align: center;
+    }
+  }
+}
+</style>
+
+<style lang="scss">
+.c-contenu .c-introduction {
+  text-align: left;
+  margin-bottom: 48px;
+  .c-introduction__h3 {
+    font-family: "Decoy", arial;
+    color: $colordarkgreen;
+    font-size: 1.6em;
+    margin-bottom: 8px;
+  }
+}
+.e-formulaire ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-bottom: 24px;
+    label {
+      font-family: roboto;
+      color: $colordarkgreen;
+      font-weight: bold;
+      font-size: 1.25em;
+    }
+    input {
+      display: block;
+      margin-top: 8px;
+      width: 100%;
+      font-size: 1em;
+      padding: 6px 0;
+      border: 1px solid $colordarkgreen;
+      border-radius: 4px;
+    }
+  }
+}
+input[type="submit"] {
+  margin-top: 24px !important;
+}
+</style>
