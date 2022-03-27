@@ -366,4 +366,16 @@
   br {
     margin: 5px;
   }
+
+  @media (max-width: 480px) {
+  .cgu{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .cgu h2{
+    padding-left: 1%;
+    text-align: left;
+  }
+}
 </style>
