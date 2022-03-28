@@ -13,89 +13,68 @@
 @import "_Perso_clist";
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
 html {
-    font-size: calc($rootfontSize + 0.85vmin);
+  font-size: calc($rootfontSize + 0.45vmin);
 }
 
 h2 {
+  color: $colordarkgreen;
+  font-family: $fontTitle;
+  text-align: left;
+  margin-left: 2em;
+  margin-bottom: 0;
+  font-size: pxToRem(35);
 
-    color: $colordarkgreen;
-    font-family: $fontTitle;
-    text-align: left;
-    margin-left: 2em;
-    margin-bottom: 0;
-    font-size: pxToRem(35);
+  @include title;
 
-    @include title;
-
-    @include small-up {
-        font-size: pxToRem(24);
-    }
-
+  @include small-up {
+    font-size: pxToRem(24);
+  }
 }
 
 p {
-    color: $colordarkgreen;
-    font-family: $fontTexte
+  color: $colordarkgreen;
+  font-family: $fontTexte;
+}
+
+.e-fullbutton,
+.whiteFilledBtn {
+  border-radius: 28px;
+  border-width: 4px;
+  border-color: $colordarkgreen;
+  border-style: solid;
+  box-shadow: 1px 1px 5px 2px $colorshadow;
+  transition: all ease-out 0.23s;
+  padding: 10px;
+  width: 220px;
+  max-width: 80%;
+  font-family: $fontTexte;
+  font-weight: bold;
+  font-size: 16px;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: none;
+  }
 }
 
 .whiteFilledBtn {
-    font-family: $fontTexte;
-    font-weight: bold;
-    font-size: 16px;
-    color: $colordarkgreen;
-    background-color: transparent;
-    padding: 10px;
-    margin: 20px;
-    width: 220px;
-    max-width: 80%;
-    border-radius: 28px;
-    border-width: 4px;
-    border-color: $colordarkgreen;
-    border-style: solid;
-    box-shadow: 1px 1px 5px 0px $colorshadow;
+  color: $colordarkgreen;
+  background-color: transparent;
 
-    @include small-up {
-        cursor: pointer;
-        background-color: $colordarkgreen;
-        color: $colorwhite;
-        box-shadow: none;
-        transition: all ease-out 0.23s;
-    }
-
-    &:hover {
-        cursor: pointer;
-        background-color: $colordarkgreen;
-        color: $colorwhite;
-        box-shadow: none;
-        transition: all ease-out 0.23s;
-    }
+  &:hover {
+    cursor: pointer;
+    background-color: $colordarkgreen;
+    color: $colorwhite;
+  }
 }
 
 .e-fullbutton {
-    font-family: $fontTexte;
-    font-weight: bold;
-    font-size: 16px;
-    color: $colorwhite;
-    background-color: $colordarkgreen;
-    padding: 10px;
-    margin: 20px;
-    min-width: 220px;
-    border-radius: 28px;
-    border-width: 4px;
-    border-color: $colordarkgreen;
-    border-style: solid;
-    box-shadow: 1px 1px 5px 2px $colorshadow;
-
-    &:hover {
-        cursor: pointer;
-        box-shadow: none;
-        transition: all ease-out 0.4s;
-    }
+  color: $colorwhite;
+  background-color: $colordarkgreen;
 }

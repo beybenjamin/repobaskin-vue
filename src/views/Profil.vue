@@ -76,20 +76,25 @@ export default {
 .page-container {
   display: grid;
   grid-template-columns: 260px 1fr;
+  column-gap: 24px;
+  // @media (max-width: 650px) {
+  //   grid-template-columns: 130px 1fr;
+  //   font-size: 0.7em;
+  // }
+  overflow-x: hidden;
   nav {
-    position: relative;
-    top: -50px;
-    height: calc(100% + 50px + 50px);
-
     background-color: $colorgrey;
     padding-top: 168px;
-
+    padding-bottom: 68px;
     ul {
       list-style: none;
       display: flex;
       flex-direction: column;
       row-gap: 24px;
       margin-left: 24px;
+      @media (max-width: 650px) {
+        margin-left: 4px;
+      }
       li {
         margin: 0;
         padding-bottom: 2px;
@@ -131,7 +136,8 @@ export default {
 }
 
 .profil {
-  padding-top: 48px;
+  padding-top: 98px;
+  padding-bottom: 48px;
   max-width: 880px;
   min-width: 80%;
   margin: auto;

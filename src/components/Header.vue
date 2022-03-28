@@ -17,10 +17,91 @@
         <li class="e-menu__li">
           <router-link to="/perso" class="router">Ma paire</router-link>
         </li>
-        <li class="e-menu__li">
+        <li v-if="user.id" class="e-menu__li">
           <a href="/profil" id="e-menu__img"
             ><img src="/imgs/icon_profil.png" alt=""
           /></a>
+        </li>
+        <li v-else class="e-menu__li">
+          <a href="#" @click="openModal = true" class="router">Se connecter</a>
+          <div
+            v-if="openModal"
+            class="modalFilter"
+            @click.self="openModal = false"
+          ></div>
+          <div v-if="openModal" class="modal">
+            <button v-if="!subscribeModal" class="whiteFilledBtn connectBtn">
+              Connexion avec Google
+            </button>
+            <button v-if="!subscribeModal" class="whiteFilledBtn connectBtn">
+              Connexion avec Apple
+            </button>
+            <form method="post" class="form">
+              <div v-if="subscribeModal" class="form__div">
+                <label class="form__label"
+                  >Nom*
+                  <input type="text" name="Nom" required />
+                </label>
+              </div>
+              <div v-if="subscribeModal" class="form__div">
+                <label for="Prénom" class="form__label"
+                  >Prénom*
+                  <input type="text" name="Prénom" id="Prénom" required />
+                </label>
+              </div>
+              <div v-if="subscribeModal" class="form__div">
+                <label for="Surnom" class="form__label"
+                  >Surnom*
+                  <input type="text" name="Surnom" id="Surnom" required />
+                </label>
+              </div>
+              <div class="form__div">
+                <label for="Mail" class="form__label"
+                  >Mail*
+                  <input type="email" name="Nom" id="Nom" required />
+                </label>
+              </div>
+              <div class="form__div">
+                <label for="MotdePasse" class="form__label"
+                  >Mot de Passe*
+                  <input
+                    type="password"
+                    name="MotdePasse"
+                    id="MotdePasse"
+                    required
+                  />
+                  <button
+                    v-if="!subscribeModal"
+                    class="toggleModalTypeBtn forgottenPassword"
+                  >
+                    Mot de passe oublié ?
+                  </button>
+                </label>
+              </div>
+              <div v-if="subscribeModal" class="form__div">
+                <label for="ConfirmerMdp" class="form__label"
+                  >Confirmer le mot de passe*
+                  <input
+                    type="password"
+                    name="ConfirmerMdp"
+                    id="ConfirmerMdp"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="btns">
+                <button
+                  class="toggleModalTypeBtn"
+                  @click="subscribeModal = !subscribeModal"
+                >
+                  {{ subscribeModal ? "Se connecter" : "Créer un compte" }}
+                </button>
+                <button class="e-fullbutton">
+                  {{ subscribeModal ? "S'inscrire" : "Connexion" }}
+                </button>
+              </div>
+            </form>
+          </div>
         </li>
         <li class="e-menu__li">
           <a href="#" id="e-menu__img"
@@ -31,68 +112,25 @@
     </div>
 
     <!-- modal s'inscrire -->
-<!-- 
-    <modal
-      :open="modalOpen"
-      :title="modalValues.title"
-      @close="modalOpen = false"
-      class="xl-modal"
-    >
-      <form method="post" class="form">
-        <div class="form__div">
-          <label for="Nom" class="form__label"
-            >Nom*
-            <input type="text" name="Nom" id="Nom" required />
-          </label>
-        </div>
-        <div class="form__div">
-          <label for="Prénom" class="form__label"
-            >Prénom*
-            <input type="text" name="Prénom" id="Prénom" required />
-          </label>
-        </div>
-        <div class="form__div">
-          <label for="Surnom" class="form__label"
-            >Surnom*
-            <input type="text" name="Surnom" id="Surnom" required />
-          </label>
-        </div>
-        <div class="form__div">
-          <label for="Mail" class="form__label"
-            >Mail*
-            <input type="email" name="Nom" id="Nom" required />
-          </label>
-        </div>
-        <div class="form__div">
-          <label for="MotdePasse" class="form__label"
-            >Mot de Passe*
-            <input type="password" name="MotdePasse" id="MotdePasse" required />
-          </label>
-        </div>
-        <div class="form__div">
-          <label for="ConfirmerMdp" class="form__label"
-            >Confirmer le mot de passe*
-            <input
-              type="password"
-              name="ConfirmerMdp"
-              id="ConfirmerMdp"
-              required
-            />
-          </label>
-        </div>
-        <button class="e-fullbutton">Sauvegarder</button>
-      </form>
-    </modal> -->
 
     <!--  Fin du modal s'inscrire -->
 
-    <p>Bonjour, {{ user.displayName }}</p>
-    <p>{{ user.email }}</p>
+    <div v-if="user.id">
+      <p>Bonjour, {{ user.displayName }}</p>
+      <p>{{ user.email }}</p>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  name: "Header",
+  data() {
+    return {
+      openModal: false,
+      subscribeModal: false,
+    };
+  },
   computed: {
     user() {
       return this.$store.state.user;
@@ -101,22 +139,28 @@ export default {
 };
 </script>
 
-
 <style lang="scss" scoped>
 #header {
-  background-color: $colordarkgreen;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 50px;
   max-height: 50px;
   max-width: 1100px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  margin: auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
   padding: 0 50px;
+
+  background-color: $colordarkgreen;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   box-shadow: 3px 3px 15px 2px $colorshadow;
   box-sizing: border-box;
+  z-index: 999;
 }
 
 .e-logo {
@@ -142,8 +186,63 @@ export default {
   flex-direction: row;
   text-decoration: none;
   align-items: center;
+  position: relative;
   &:not(:last-child) {
     margin-right: 35px;
+  }
+
+  .modalFilter {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 998;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .modal {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+
+    padding: 16px 36px;
+    background-color: $colorgrey;
+    z-index: 999;
+    &:hover {
+      cursor: normal;
+    }
+
+    .connectBtn {
+      margin-bottom: 12px;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 28px;
+      button {
+        max-width: 50%;
+      }
+    }
+    .toggleModalTypeBtn {
+      border: none;
+      background: none;
+      color: $colordarkpink;
+      font-weight: bold;
+
+      &.forgottenPassword {
+        text-align: left;
+        margin-top: 4px;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -178,36 +277,5 @@ export default {
   display: flex;
   flex-direction: column;
   text-align: left;
-}
-
-.e-fullbutton {
-  font-family: $fontTexte;
-  font-weight: bold;
-  font-size: 16px;
-  color: $colorwhite;
-  background-color: $colordarkgreen;
-  padding: 10px;
-  margin: 20px;
-  min-width: 220px;
-  border-radius: 28px;
-  border-width: 4px;
-  border-color: $colordarkgreen;
-  border-style: solid;
-  box-shadow: 1px 1px 5px 2px $colorshadow;
-
-  /*@include small-up {
-        font-size: pxToRem(12);
-    }
-
-    @include medium-up {
-        font-size: pxToRem(18)
-    }
-    */
-
-  &:hover {
-    cursor: pointer;
-    box-shadow: none;
-    transition: all ease-out 0.4s;
-  }
 }
 </style>

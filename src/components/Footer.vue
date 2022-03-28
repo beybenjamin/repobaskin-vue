@@ -1,4 +1,4 @@
- <template>
+<template>
   <footer>
     <div class="e-footer">
       <div class="e-footer__1">
@@ -93,11 +93,7 @@
   </footer>
 </template>
 
-
 <style lang="scss" scoped>
-footer {
-  padding-top: 4em;
-}
 .e-footer {
   --separator-height: 50px;
   background-color: $colordarkgreen;
@@ -109,7 +105,7 @@ footer {
     display: block;
     content: "";
     position: absolute;
-    top: 0;
+    bottom: calc(100% - 50px);
     left: 0;
     height: 0;
     width: 0;
@@ -222,4 +218,3 @@ footer {
   color: $colorshoeswhite;
 }
 </style>
- 
