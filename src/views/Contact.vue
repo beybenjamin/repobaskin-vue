@@ -1,17 +1,11 @@
 <template>
   <div class="contact">
-    <div class="c-div__image" >
-      <img class="e-image" src="imgs/sneakers.jpg" />
-      <div class="e-contact__titre">
-        <h2>Contact</h2>
-      </div>
-    </div>
+    <h2>Contact</h2>
 
     <div class="e-paragraphe">
       <p>
-        Un soucis avec un produit ?<br />
-        Des renseignements sur le fonctionnement du site ?<br />
-        N'hésitez pas à contacter Baskin.<br />
+        Un soucis avec un produit ? Des renseignements sur le fonctionnement du site ? <br />
+        N'hésitez pas à contacter Baskin.
         Notre équipe vous répondra dans les meilleures délais.
       </p>
     </div>
@@ -61,7 +55,7 @@
       <div class="e-map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d744985.2176521306!2d3.4044157363844203!3d43.16545639926214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b13b3d6dafa423%3A0xcb27c18f54956e94!2sBaskin!5e0!3m2!1sfr!2sfr!4v1639660369896!5m2!1sfr!2sfr"
-          width="600"
+          width="500"
           height="400"
           style="border: 0"
           allowfullscreen=""
@@ -82,8 +76,7 @@
 <style lang="scss" scoped>
 
 .e-paragraphe{
-  text-align: left;
-  padding-left: 40%;
+  text-align: center;
   padding-top: 2%;
   padding-bottom: none;
 }
@@ -101,14 +94,12 @@
 .c-formulaire_div{
   padding-top: 2%;
   text-align: left;
-  padding-left: 10%;
   flex: 30%;
 }
 
 .c-map-div{
   padding-top: 20px;
   text-align: center;
-  padding-left: 10%;
   flex: 30%;
 }
 
@@ -185,61 +176,41 @@ textarea {
 //! responssive !//
 
 @media (max-width: 480px) {
-  .flex-container {
+  .e-contact_body {
+    display: flex;
     flex-direction: column;
   }
 
   .e-map{
-    max-width: 400px;
+    width: 100px;
+    padding-left: 0%;
+  }
+
+  .e-adresse, .e-phone, h3{
+    text-align: left;
   }
 
   .e-paragraphe{
-    padding: 20%;
-    padding-top: 5%;
+    text-align: left;
+    text-align: justify;
+    padding: 2em;
   }
-  .e-image{
-    height: 5%;
+
+  .c-formulaire_div{
+    padding: 2em;
   }
+
+  .c-map-div{
+    padding: 2em;
+  }
+ 
 }
 
 //! Header !//
 
-.c-div__image{
-    height: 350px;
-    width: 100vm;
-    overflow: hidden;
-}
-
-.e-image{
-    min-height: 90%;
-    min-width: 90%;
-    width: auto;
-    height: auto;
-    max-width: none;
-    max-height: none;
-    display: block;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    filter: blur(5px) brightness(50%);
-}
-
-.e-contact__titre{
-  font-size: 60px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: absolute;
-  padding-bottom: 18%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.e-contact__titre h2{
-  color: antiquewhite;
+h2{
+  padding-top: 1em;
+  text-align: center;
 }
 
 </style>
