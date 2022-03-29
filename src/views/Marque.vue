@@ -4,7 +4,7 @@
 
     <div id="e-marque__page">
       <div class="e-paragraphe">
-        <p class="e-p_1">
+        <p>
           Quand quatre étudiants ont lancé la marque <strong>Baskin</strong>, ce
           n’était pas simplement pour créer une marque de chaussures comme les
           autres, mais répondre à une demande des consommateurs, créer des
@@ -13,7 +13,7 @@
           chez les vendeurs habituels.
         </p>
         <br />
-        <p class="e-p_2">
+        <p>
           Vous ne trouverez pas ici de tendances saisonnières en constante
           évolution. Au lieu de cela, nous nous concentrons sur la création de
           sneakers à <strong>votre image</strong> avec une fabrication de
@@ -21,7 +21,7 @@
           faible <strong>impact environnemental</strong>.
         </p>
         <br />
-        <p class="e-p_3">
+        <p>
           Nous visons des produits <strong>durables</strong> pour minimiser
           l’utilisation des ressources de la terre. Cela implique la fabrication
           de biens de consommation fabriqués à partir de matériaux durables.
@@ -81,14 +81,15 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+
 .e-paragraphe {
-  padding: 2em 0;
+  padding: 2em 2em;
   max-width: 1100px;
   margin: auto;
   text-align: left;
 
   strong {
-    font-size: 1.2em;
+    font-size: 1.05em;
     font-style: italic;
     font-family: Decoy, Arial;
   }
