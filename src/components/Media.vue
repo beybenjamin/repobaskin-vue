@@ -53,6 +53,7 @@
   flex-direction: row;
   row-gap: 24px;
   justify-content: space-around;
+  padding-bottom: 42px;
 }
 
 .article {

@@ -36,6 +36,10 @@
 
 .c-valeurs {
   padding: 3em 2em;
+
+  button {
+    margin-top: 12px;
+  }
 }
 
 .valeurs {

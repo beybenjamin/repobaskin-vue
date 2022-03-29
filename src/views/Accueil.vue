@@ -2,10 +2,10 @@
   <div class="accueil">
     <div id="vidéo_acueil">
       <!--Ici mettre la vidéo et le bouton "Je créer ma paire"-->
-      <PopUp/>
+      <!-- <PopUp/> -->
       <NosValeurs />
       <Communaute />
-      <Media/>
+      <Media />
     </div>
   </div>
 </template>
@@ -20,5 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+  .accueil {
+    padding-top: 50px;
+  }
 </style>
