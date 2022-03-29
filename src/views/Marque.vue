@@ -28,10 +28,7 @@
         </p>
       </div>
       <div class="e-div__image2">
-        <img class="e-image2" src="imgs/chaussure_2.png" alt="#" />
-        <img class="e-image3" src="imgs/chaussure_3.png" alt="#" />
-        <img class="e-image4" src="imgs/chaussure_4.png" alt="#" />
-        <img class="e-image5" src="imgs/chaussure_5.png" alt="#" />
+        <img class="e-image2" src="imgs/Marque.gif" alt="#" />
       </div>
       <div class="e-paragraphe">
         <p>
@@ -138,37 +135,11 @@ export default {
 .e-image2 {
   width: auto;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
   max-width: none;
   max-height: none;
   display: block;
-  transform: scaleX(-1);
-}
-
-.e-image3 {
-  width: auto;
-  height: auto;
-  max-width: none;
-  max-height: none;
-  display: block;
-  transform: scaleX(-1);
-}
-
-.e-image4 {
-  width: auto;
-  height: auto;
-  max-width: none;
-  max-height: none;
-  display: block;
-  transform: scaleX(-1);
-}
-
-.e-image5 {
-  width: auto;
-  height: auto;
-  max-width: none;
-  max-height: none;
-  display: block;
-  transform: scaleX(-1);
 }
 
 .bouton {
@@ -194,6 +165,11 @@ export default {
 
   .e-p_3 {
     font-size: 14px;
+  }
+
+  .e-image2 {
+  max-width: 90%;
+  max-height: 90%;
   }
 }
 </style>
