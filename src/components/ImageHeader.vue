@@ -26,6 +26,7 @@ export default {
 .container {
   position: relative;
   height: 360px;
+  max-height: calc(30vh + 140px);
   width: 100vw;
   overflow: hidden;
   background-position: center center;

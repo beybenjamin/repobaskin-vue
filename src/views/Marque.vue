@@ -1,33 +1,30 @@
 <template>
   <div class="marque">
-    <div class="e-div__image" >
-      <img class="e-image" src="imgs/sneakers.jpg" />
-      <p class="e-marque__titre">
-        La marque
-      </p>
-    </div>
+    <ImageHeader title="La marque" imgUrl="imgs/sneakers.jpg" />
 
     <div id="e-marque__page">
       <div class="e-paragraphe">
         <p class="e-p_1">
-          Quand quatre étudiants ont lancé la marque <strong>Baskin</strong>, ce n’était pas
-          simplement pour créer une marque de chaussures comme les autres, mais
-          répondre à une demande des consommateurs, créer des <strong>designs uniques</strong> et
-          ajoutant des améliorations dynamiques aux silhouettes classiques qui
-          ne peuvent être achetées chez les vendeurs habituels.
+          Quand quatre étudiants ont lancé la marque <strong>Baskin</strong>, ce
+          n’était pas simplement pour créer une marque de chaussures comme les
+          autres, mais répondre à une demande des consommateurs, créer des
+          <strong>designs uniques</strong> et ajoutant des améliorations
+          dynamiques aux silhouettes classiques qui ne peuvent être achetées
+          chez les vendeurs habituels.
         </p>
-        <br>
+        <br />
         <p class="e-p_2">
           Vous ne trouverez pas ici de tendances saisonnières en constante
           évolution. Au lieu de cela, nous nous concentrons sur la création de
-          sneakers à <strong>votre image</strong> avec une fabrication de <strong>haute qualité</strong>, qui sont
-          confortables et ayant un faible <strong>impact environnemental</strong>.
+          sneakers à <strong>votre image</strong> avec une fabrication de
+          <strong>haute qualité</strong>, qui sont confortables et ayant un
+          faible <strong>impact environnemental</strong>.
         </p>
-        <br>
+        <br />
         <p class="e-p_3">
-          Nous visons des produits <strong>durables</strong> pour minimiser l’utilisation des
-          ressources de la terre. Cela implique la fabrication de biens de
-          consommation fabriqués à partir de matériaux durables.
+          Nous visons des produits <strong>durables</strong> pour minimiser
+          l’utilisation des ressources de la terre. Cela implique la fabrication
+          de biens de consommation fabriqués à partir de matériaux durables.
         </p>
       </div>
       <div class="e-div__image2">
@@ -39,58 +36,68 @@
       <div class="e-paragraphe">
         <p>
           L'un des plus grands obstacles à la durabilité environnementale dans
-          l'industrie de la chaussure est le <stong>cycle saisonnier</stong> de la mode et la
-          <strong>pression marketing</strong> associée qui est implacablement appliquée aux
-          consommateurs. Conformez-vous au dernier look ou vous n’êtes personne !
+          l'industrie de la chaussure est le <stong>cycle saisonnier</stong> de
+          la mode et la <strong>pression marketing</strong> associée qui est
+          implacablement appliquée aux consommateurs. Conformez-vous au dernier
+          look ou vous n’êtes personne !
         </p>
-        <br>
+        <br />
         <p>
           Cette stratégie de l'industrie, génère d'énormes profits, mais elle
-          tue notre planète. Nous pensons que le style doivent être <stong>durables</stong>,
-          <stong>ethniques</stong> et adaptés pour <strong>l'individu</strong>
+          tue notre planète. Nous pensons que le style doivent être
+          <stong>durables</stong>, <stong>ethniques</stong> et adaptés pour
+          <strong>l'individu</strong>
         </p>
-        <br>
+        <br />
         <p>
           Nous sommes fiers de vous proposer la conception de vos propres
-          sneakers à votre <strong>image</strong> pouvant être portées tous les jours.
+          sneakers à votre <strong>image</strong> pouvant être portées tous les
+          jours.
         </p>
-        <br>
+        <br />
         <p>
-          Tous nos produits sont <strong>fabriqués en France</strong>. Si vous rencontrez des
-          difficultés avec l'un de nos produits à tout moment. Veuillez nous
-          contacter pour obtenir des conseils.
+          Tous nos produits sont <strong>fabriqués en France</strong>. Si vous
+          rencontrez des difficultés avec l'un de nos produits à tout moment.
+          Veuillez nous contacter pour obtenir des conseils.
         </p>
       </div>
-    </div>      
-    <div class="bouton">
-          <router-link to="/contact" class="whiteFilledBtn">Contacter BaskIn</router-link>
     </div>
-    <br>
-    <br>
+    <div class="bouton">
+      <router-link to="/contact" class="whiteFilledBtn"
+        >Contacter BaskIn</router-link
+      >
+    </div>
+    <br />
+    <br />
   </div>
 </template>
 <script>
-
+import ImageHeader from "@/components/ImageHeader";
+export default {
+  name: "Marque",
+  components: {
+    ImageHeader,
+  },
+};
 </script>
 <style lang="scss" scoped>
-
-.e-paragraphe{
+.e-paragraphe {
   padding: 2em 0;
   max-width: 1100px;
   margin: auto;
   text-align: left;
 
-  strong{
+  strong {
     font-size: 1.2em;
     font-style: italic;
     font-family: Decoy, Arial;
   }
 }
 
-.e-div__image{
-    height: 41em;
-    position: relative;
-    overflow: hidden;
+.e-div__image {
+  height: 41em;
+  position: relative;
+  overflow: hidden;
 }
 
 .e-image {
@@ -106,13 +113,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   filter: blur(5px) brightness(50%);
-
 }
 
-.e-marque__titre{
+.e-marque__titre {
   font-size: 30px;
   font-weight: bold;
-  font-family: 'Decoy', Arial;
+  font-family: "Decoy", Arial;
   display: flex;
   color: #fff;
   position: absolute;
@@ -121,76 +127,72 @@
   transform: translate(-50%, -50%);
 }
 
-.e-div__image2{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
+.e-div__image2 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
 }
 
-.e-image2{
-    width: auto;
-    height: auto;
-    max-width: none;
-    max-height: none;
-    display: block;
-    transform: scaleX(-1);
+.e-image2 {
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  display: block;
+  transform: scaleX(-1);
 }
 
-.e-image3{
-    width: auto;
-    height: auto;
-    max-width: none;
-    max-height: none;
-    display: block;
-    transform: scaleX(-1);
+.e-image3 {
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  display: block;
+  transform: scaleX(-1);
 }
 
-.e-image4{
-    width: auto;
-    height: auto;
-    max-width: none;
-    max-height: none;
-    display: block;
-    transform: scaleX(-1);
+.e-image4 {
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  display: block;
+  transform: scaleX(-1);
 }
 
-.e-image5{
-    width: auto;
-    height: auto;
-    max-width: none;
-    max-height: none;
-    display: block;
-    transform: scaleX(-1);
+.e-image5 {
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  display: block;
+  transform: scaleX(-1);
 }
 
-.bouton{
+.bouton {
   text-decoration: none;
   margin-bottom: 2em;
 }
 
-.whiteFilledBtn{
+.whiteFilledBtn {
   text-decoration: none;
 }
 
 @media (max-width: 480px) {
-  .e-div__image{
+  .e-div__image {
     height: 43em;
-
   }
-  .e-p_1{
+  .e-p_1 {
     font-size: 14px;
-
   }
 
-  .e-p_2{
+  .e-p_2 {
     font-size: 14px;
-
   }
 
-  .e-p_3{
+  .e-p_3 {
     font-size: 14px;
-
   }
 }
 </style>
