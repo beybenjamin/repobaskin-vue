@@ -104,6 +104,8 @@ export default {
   position: absolute;
   top: calc(100% + 5px);
   right: 0;
+  width: 24em;
+  max-width: 70vw;
 
   padding: 16px 36px;
   background-color: $colorgrey;
@@ -114,13 +116,22 @@ export default {
 
   .connectBtn {
     margin-bottom: 12px;
+    font-size: 0.8em;
+    padding: 4px 8px;
   }
 
   .btns {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 8px;
+    column-gap: 8px;
     margin-top: 28px;
+    margin-bottom: 12px;
     button {
+      font-size: 0.9em;
+      padding: 4px 8px;
+      min-width: min-content;
       max-width: 50%;
     }
   }

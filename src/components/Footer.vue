@@ -115,6 +115,10 @@
     background-color: transparent;
     box-sizing: border-box;
   }
+
+  @media (max-width: 700px) {
+  padding-bottom: 60px
+  }
 }
 
 .e-footer__1 {
@@ -192,7 +196,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: right;
+  /* justify-content: right; */
   margin-top: 2em;
 }
 
