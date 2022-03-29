@@ -4,7 +4,7 @@
     <section class="c-perso">
       <div class="c-perso__container">
 
-        <img class="e-perso__img_perso" src="/imgs/{{IDurl}}.png" alt="" /> -->
+        <!--<img class="e-perso__img_perso" src="/imgs/{{IDchoice+IDcolor}}.png" alt="" /> -->
         
         
         <div class="c-perso__icon">
@@ -107,7 +107,7 @@
    
 
     <ul class="c-Colorlist" id="Menucustom">
-      <button class="c-Colorlist__item -shoesdarkred"  id="r" onclick="getID()"></button>
+      <button class="c-Colorlist__item -shoesdarkred"  id="r" onclick=""></button>
       <button class="c-Colorlist__item -shoesyellow" id="y"></button>
       <button class="c-Colorlist__item -shoesgreen" id="g"></button>
       <button class="c-Colorlist__item -shoesblue -ColorActif" id="b" ></button>
@@ -144,19 +144,18 @@ mounted: function () {
       });
     }
 
-
-    function getID() {
-       //var IDchoice= document.getElementById('semelle') ;
-       //var IDcolor= document.getElementById('')
-       String IDchoice= semelle;
-       String IDcolor= r;
-     String IDurl= IDchoice + IDcolor;
+/*
+   function getID() {
+       let IDchoice= document.getElementById(semelle) ;
+       let IDcolor= document.getElementById(r);
+     
+     String (IDurl)=(IDchoice + IDcolor);
      IDchoice;
      IDcolor;
      IDurl;
     //var a= document.getElementById('#r')
     }
-    getID;
+    getID; */
 
 }
 
