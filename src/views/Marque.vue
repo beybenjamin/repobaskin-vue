@@ -8,22 +8,24 @@
     </div>
 
     <div id="e-marque__page">
-      <div id="e-paragraphe1">
+      <div class="e-paragraphe">
         <p class="e-p_1">
-          Quand quatre étudiants ont lancé la marque Baskin, ce n’était pas
+          Quand quatre étudiants ont lancé la marque <strong>Baskin</strong>, ce n’était pas
           simplement pour créer une marque de chaussures comme les autres, mais
-          répondre à une demande des consommateurs, créer des designs uniques et
+          répondre à une demande des consommateurs, créer des <strong>designs uniques</strong> et
           ajoutant des améliorations dynamiques aux silhouettes classiques qui
           ne peuvent être achetées chez les vendeurs habituels.
         </p>
+        <br>
         <p class="e-p_2">
           Vous ne trouverez pas ici de tendances saisonnières en constante
           évolution. Au lieu de cela, nous nous concentrons sur la création de
-          sneakers à votre image avec une fabrication de haute qualité, qui sont
-          confortables et ayant un faible impact environnemental.
+          sneakers à <strong>votre image</strong> avec une fabrication de <strong>haute qualité</strong>, qui sont
+          confortables et ayant un faible <strong>impact environnemental</strong>.
         </p>
+        <br>
         <p class="e-p_3">
-          Nous visons des produits durables pour minimiser l’utilisation des
+          Nous visons des produits <strong>durables</strong> pour minimiser l’utilisation des
           ressources de la terre. Cela implique la fabrication de biens de
           consommation fabriqués à partir de matériaux durables.
         </p>
@@ -34,32 +36,34 @@
         <img class="e-image4" src="imgs/chaussure_4.png" alt="#" />
         <img class="e-image5" src="imgs/chaussure_5.png" alt="#" />
       </div>
-      <div id="e-paragraphe2">
-        <p class="e-p_1">
+      <div class="e-paragraphe">
+        <p>
           L'un des plus grands obstacles à la durabilité environnementale dans
-          l'industrie de la chaussure est le cycle saisonnier de la mode et la
-          pression marketing associée qui est implacablement appliquée aux
-          consommateurs. Conformez-vous au dernier look ou vous n’êtes personne
-          !
+          l'industrie de la chaussure est le <stong>cycle saisonnier</stong> de la mode et la
+          <strong>pression marketing</strong> associée qui est implacablement appliquée aux
+          consommateurs. Conformez-vous au dernier look ou vous n’êtes personne !
         </p>
-        <p class="e-p_2">
+        <br>
+        <p>
           Cette stratégie de l'industrie, génère d'énormes profits, mais elle
-          tue notre planète. Nous pensons que le style doivent être durables,
-          ethniques et adaptés pour l'individu.
+          tue notre planète. Nous pensons que le style doivent être <stong>durables</stong>,
+          <stong>ethniques</stong> et adaptés pour <strong>l'individu</strong>
         </p>
-        <p class="e-p_2">
+        <br>
+        <p>
           Nous sommes fiers de vous proposer la conception de vos propres
-          sneakers à votre image pouvant être portées tous les jours.
+          sneakers à votre <strong>image</strong> pouvant être portées tous les jours.
         </p>
-        <p class="e-p_3">
-          Tous nos produits sont fabriqués en France. Si vous rencontrez des
+        <br>
+        <p>
+          Tous nos produits sont <strong>fabriqués en France</strong>. Si vous rencontrez des
           difficultés avec l'un de nos produits à tout moment. Veuillez nous
           contacter pour obtenir des conseils.
         </p>
       </div>
     </div>      
-    <div>
-          <router-link to="/contact" class="e-p_bouton">Contacter BaskIn</router-link>
+    <div class="bouton">
+          <router-link to="/contact" class="whiteFilledBtn">Contacter BaskIn</router-link>
     </div>
     <br>
     <br>
@@ -69,6 +73,19 @@
 
 </script>
 <style lang="scss" scoped>
+
+.e-paragraphe{
+  padding: 2em 0;
+  max-width: 1100px;
+  margin: auto;
+  text-align: left;
+
+  strong{
+    font-size: 1.2em;
+    font-style: italic;
+    font-family: Decoy, Arial;
+  }
+}
 
 .e-div__image{
     height: 41em;
@@ -147,56 +164,13 @@
     transform: scaleX(-1);
 }
 
-.e-p_1 {
-    font-size: 16px;
-    text-align: left;
-    margin: 30px 15px 0px 15px;
+.bouton{
+  text-decoration: none;
+  margin-bottom: 2em;
 }
 
-.e-p_2 {
-    font-size: 16px;
-    text-align: left;
-    margin: 10px 15px;
-}
-
-.e-p_3 {
-    font-size: 16px;
-    text-align: left;
-    margin: 0px 15px 30px 15px;
-}
-
-.e-p_bouton {
-    font-family: $fontTexte;
-    font-weight: bold;
-    font-size: 16px;
-    color: $colordarkgreen;
-    background-color: transparent;
-    padding: 10px;
-    margin: 20px;
-    width: 220px;
-    max-width: 80%;
-    border-radius: 28px;
-    border-width: 4px;
-    border-color: $colordarkgreen;
-    border-style: solid;
-    box-shadow: 1px 1px 5px 0px $colorshadow;
-    text-decoration: none;
-
-    @include small-up {
-        cursor: pointer;
-        background-color: $colordarkgreen;
-        color: $colorwhite;
-        box-shadow: none;
-        transition: all ease-out 0.23s;
-    }
-
-    &:hover {
-        cursor: pointer;
-        background-color: $colordarkgreen;
-        color: $colorwhite;
-        box-shadow: none;
-        transition: all ease-out 0.23s;
-    }
+.whiteFilledBtn{
+  text-decoration: none;
 }
 
 @media (max-width: 480px) {
