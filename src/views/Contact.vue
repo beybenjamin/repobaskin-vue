@@ -40,18 +40,21 @@
           <button class="e-fullbutton">Envoyer</button>
         </form>
       </div>
+
       <div class="c-map-div">
-        <h3>Coordonnées</h3>
-        <div class="e-adresse">
-          <h4>Adresse :</h4>
-          <p>
-            5 avenue Léon Blum<br />
-            25200 Montbéliard
-          </p>
-        </div>
-        <div class="e-phone">
-          <h4>Téléphonne :</h4>
-          <p>03 81 00 00 00</p>
+        <div class="contact_info">
+          <h3>Coordonnées</h3>
+          <div class="e-adresse">
+            <h4>Adresse :</h4>
+            <p>
+              5 avenue Léon Blum<br />
+              25200 Montbéliard
+            </p>
+          </div>
+          <div class="e-phone">
+            <h4>Téléphonne :</h4>
+            <p>03 81 00 00 00</p>
+          </div>
         </div>
         <div class="e-map">
           <iframe
@@ -81,31 +84,47 @@ export default {
 <style lang="scss" scoped>
 .e-contact_body {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  padding-top: 3%;
-  width: 1000px;
-  justify-content: baseline;
+  max-width: 1100px;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 4em;
+  column-gap: 64px;
+  align-items: center;
 }
 
 .e-paragraphe {
   text-align: center;
-  padding-top: 2%;
   padding-bottom: none;
+  margin: 3em 0;
+  padding: 0;
 }
 
-
 .c-formulaire_div {
-  padding-top: 2%;
   text-align: left;
-  flex: 30%;
+  max-width: 100%;
+  flex-grow: 1;
+}
+
+.e-fullbutton {
+  display: block;
+  margin: auto;
+  margin-top: 1.5em;
+}
+
+.contact_info {
+  margin-bottom: 2em;
+  & > div:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
 .c-map-div {
   padding-top: 20px;
   text-align: center;
-  flex: 30%;
+  flex-grow: 1;
 }
 
 .titre {
@@ -123,9 +142,7 @@ export default {
 //! début formulaire!//
 
 .c-formulaire_div p {
-  padding-top: 3%;
   font-weight: bold;
-  padding-bottom: 1%;
 }
 
 .c-formulaire_div p b {
@@ -133,7 +150,7 @@ export default {
 }
 
 form {
-  width: 335px;
+  width: 100%;
   padding: 1em;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -145,14 +162,14 @@ form div + div {
 
 label {
   display: inline-block;
-  width: 90px;
+  width: 90%;
   text-align: right;
 }
 
 input,
 textarea {
   font: 1em sans-serif;
-  width: 300px;
+  width: 100%;
   box-sizing: border-box;
   border: 1px solid #999;
   border-radius: 5px;
@@ -189,7 +206,7 @@ textarea {
   }
 
   .e-map {
-    width: 100px;
+    width: 100%;
     padding-left: 0%;
   }
 
@@ -203,6 +220,7 @@ textarea {
     text-align: left;
     text-align: justify;
     padding: 2em;
+    margin: 0;
   }
 
   .c-formulaire_div {
@@ -219,5 +237,8 @@ textarea {
 h2 {
   padding-top: 1em;
   text-align: center;
+}
+iframe {
+  width: 100%;
 }
 </style>
