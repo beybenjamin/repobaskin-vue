@@ -1,6 +1,6 @@
 <template>
   <div class="marque">
-    <ImageHeader title="La marque" imgUrl="imgs/sneakers.jpg" />
+    <ImageHeader title="La marque" imgUrl="imgs/ban_3.jpeg" />
 
     <div id="e-marque__page">
       <div class="e-paragraphe">

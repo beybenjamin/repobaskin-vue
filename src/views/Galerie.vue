@@ -1,6 +1,6 @@
 <template>
-  <div class="gallerie">
-    <ImageHeader title="La galerie" />
+  <div class="gallerie" >
+    <ImageHeader title="La galerie" imgUrl="imgs/ban_2.jpeg" />
     <div class="gallerie__fond">
       <ul class="e-products">
         <li
