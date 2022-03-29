@@ -1,11 +1,11 @@
 <template>
-  <div class="c-div__image">
-    <img class="e-image" src="imgs/sneakers.jpg" />
-    <div class="e-marque__titre">
+  <div class="container" :style="{ backgroundImage: 'url(' + imgUrl + ')' }">
+    <div class="content">
       <h2>{{ title }}</h2>
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: "ImageHeader",
@@ -14,44 +14,37 @@ export default {
       type: String,
       default: () => "La marque",
     },
+    imgUrl: {
+      type: String,
+      default: () => "imgs/sneakers.jpg",
+    },
   },
 };
 </script>
+
 <style lang="scss" scoped>
-.c-div__image {
-  height: 40em;
-  width: 100vm;
-  overflow: hidden;
-}
-
-.e-image {
-  min-height: 100%;
-  min-width: 100%;
-  width: auto;
-  height: auto;
-  max-width: none;
-  max-height: none;
-  display: block;
+.container {
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  filter: blur(5px) brightness(50%);
-}
+  height: 360px;
+  width: 100vw;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.e-marque__titre {
-  font-size: 60px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  h2 {
-    color: #fff;
-    margin: 0;
+  .content {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    h2 {
+      color: #fff;
+      margin: 0;
+    }
   }
 }
 </style>
