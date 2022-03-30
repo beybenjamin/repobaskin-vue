@@ -28,16 +28,12 @@
         </p>
       </div>
       <div class="e-div__image2">
-<<<<<<< Updated upstream
-        <img class="e-image2" src="imgs/Marque.gif" alt="#" />
-=======
         <img class="e-image2" src="imgs/gif.gif" alt="#" />
->>>>>>> Stashed changes
       </div>
       <div class="e-paragraphe">
         <p>
           L'un des plus grands obstacles à la durabilité environnementale dans
-          l'industrie de la chaussure est le <stong>cycle saisonnier</stong> de
+          l'industrie de la chaussure est le <strong>cycle saisonnier</strong> de
           la mode et la <strong>pression marketing</strong> associée qui est
           implacablement appliquée aux consommateurs. Conformez-vous au dernier
           look ou vous n’êtes personne !
@@ -137,17 +133,7 @@ export default {
 }
 
 .e-image2 {
-<<<<<<< Updated upstream
-  width: auto;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: none;
-  max-height: none;
-  display: block;
-=======
   margin: auto;
->>>>>>> Stashed changes
 }
 
 .bouton {
