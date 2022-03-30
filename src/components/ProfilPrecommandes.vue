@@ -8,7 +8,7 @@
       <ul class="c-precommandes">
         <li>
           <div class="e-chaussures">
-            <img src="/imgs/chaussure_2.png" alt="Photo d'une basquette" />
+            <img src="/imgs/choussure_2.png" alt="Photo d'une basquette" />
           </div>
           <div class="e-informations">
             <p><strong>Nom de la basket</strong>La Bask'It</p>
@@ -19,7 +19,7 @@
         </li>
         <li>
           <div class="e-chaussures">
-            <img src="/imgs/chaussure_2.png" alt="Photo d'une basquette" />
+            <img src="/imgs/choussure_1.png" alt="Photo d'une basquette" />
           </div>
           <div class="e-informations">
             <p><strong>Nom de la basket</strong>La Bask'It</p>

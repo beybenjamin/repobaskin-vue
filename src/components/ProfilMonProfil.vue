@@ -8,7 +8,7 @@
     <div class="c-photo">
       <img
         class="e-photo__img"
-        src="imgs/puma-618x449.jpg"
+        src="imgs/théo.png"
         alt="Photo d'un jeune homme"
       />
       <div>

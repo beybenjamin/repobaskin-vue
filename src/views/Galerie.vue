@@ -179,4 +179,9 @@ li {
     }
   }
 }
+
+.container{
+  padding: 0;
+}
+
 </style>

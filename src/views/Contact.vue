@@ -58,14 +58,14 @@
         </div>
         <div class="e-map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d744985.2176521306!2d3.4044157363844203!3d43.16545639926214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b13b3d6dafa423%3A0xcb27c18f54956e94!2sBaskin!5e0!3m2!1sfr!2sfr!4v1639660369896!5m2!1sfr!2sfr"
-            width="500"
-            height="400"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43113.95064033836!2d6.748395765370188!3d47.51675391964233!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4792168cd6c87ad9%3A0x409ce34b313da10!2s25200%20Montb%C3%A9liard!5e0!3m2!1sfr!2sfr!4v1648641013128!5m2!1sfr!2sfr"
+            width="600"
+            height="450"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
-          >
-          </iframe>
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </div>
@@ -230,6 +230,10 @@ textarea {
   .c-map-div {
     padding: 2em;
   }
+}
+
+.container {
+  padding: 0;
 }
 
 //! Header !//
