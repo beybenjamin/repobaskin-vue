@@ -140,6 +140,7 @@ export default {
     padding: 5px;
     border-radius: 50%;
     transition: all ease 230ms;
+    caret-color: transparent;
 
     &:hover {
       cursor: pointer;
@@ -156,6 +157,7 @@ export default {
       height: 100%;
       border-radius: 50%;
       box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.3);
+      caret-color: transparent;
     }
   }
 }
