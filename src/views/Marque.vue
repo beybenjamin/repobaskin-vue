@@ -28,15 +28,12 @@
         </p>
       </div>
       <div class="e-div__image2">
-        <img class="e-image2" src="imgs/chaussure_2.png" alt="#" />
-        <img class="e-image3" src="imgs/chaussure_3.png" alt="#" />
-        <img class="e-image4" src="imgs/chaussure_4.png" alt="#" />
-        <img class="e-image5" src="imgs/chaussure_5.png" alt="#" />
+        <img class="e-image2" src="imgs/gif.gif" alt="#" />
       </div>
       <div class="e-paragraphe">
         <p>
           L'un des plus grands obstacles à la durabilité environnementale dans
-          l'industrie de la chaussure est le <stong>cycle saisonnier</stong> de
+          l'industrie de la chaussure est le <strong>cycle saisonnier</strong> de
           la mode et la <strong>pression marketing</strong> associée qui est
           implacablement appliquée aux consommateurs. Conformez-vous au dernier
           look ou vous n’êtes personne !
@@ -136,39 +133,7 @@ export default {
 }
 
 .e-image2 {
-  width: auto;
-  height: auto;
-  max-width: none;
-  max-height: none;
-  display: block;
-  transform: scaleX(-1);
-}
-
-.e-image3 {
-  width: auto;
-  height: auto;
-  max-width: none;
-  max-height: none;
-  display: block;
-  transform: scaleX(-1);
-}
-
-.e-image4 {
-  width: auto;
-  height: auto;
-  max-width: none;
-  max-height: none;
-  display: block;
-  transform: scaleX(-1);
-}
-
-.e-image5 {
-  width: auto;
-  height: auto;
-  max-width: none;
-  max-height: none;
-  display: block;
-  transform: scaleX(-1);
+  margin: auto;
 }
 
 .bouton {
@@ -194,6 +159,11 @@ export default {
 
   .e-p_3 {
     font-size: 14px;
+  }
+
+  .e-image2 {
+  max-width: 90%;
+  max-height: 90%;
   }
 }
 </style>

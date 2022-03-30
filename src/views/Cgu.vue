@@ -332,8 +332,7 @@
 <style lang="scss" scoped>
   
   .cgu{
-    padding-left: 12%;
-    padding-right: 12%;
+    padding: 4em 12em;
   }
 
   h2 {

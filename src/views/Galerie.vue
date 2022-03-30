@@ -26,7 +26,7 @@
           </div>
           <div class="info-container">
             <p>{{ shoe.title.rendered }}</p>
-            <button class="whiteFilledBtn">Prendre le visuel</button>
+            <button class="whiteFilledBtn">Commander ce visuel</button>
           </div>
         </li>
       </ul>
@@ -54,7 +54,7 @@ export default {
     },
     getShoes() {
       axios
-        .get(`https://sitebaskin.benjaminbey.fr/wp-json/wp/V2/chaussures`)
+        .get(`https://sitebaskin.benjaminbey.fr/wp-json/wp/V2/chaussures?per_page=100`)
         .then((response) => {
           console.log(response.data);
           this.shoes = response.data.map((shoe) => ({ liked: false, ...shoe }));
