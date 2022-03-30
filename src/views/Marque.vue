@@ -141,6 +141,10 @@ export default {
   margin-bottom: 2em;
 }
 
+.container{
+  padding: 0;
+}
+
 .whiteFilledBtn {
   text-decoration: none;
 }

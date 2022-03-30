@@ -25,7 +25,11 @@
         </li>
       </ul>
     </div>
-    <button class="whiteFilledBtn">En savoir plus</button>
+     <div class="bouton">
+      <router-link to="/Galerie" class="whiteFilledBtn"
+        >En savoir plus</router-link
+      >
+    </div>
   </div>
 </template>
 <script>
@@ -69,6 +73,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 // Communauté
+
+.bouton {
+  margin-bottom: 2em;
+  margin-top: 4em;
+}
+
+.whiteFilledBtn{
+  text-decoration: none;
+}
 
 .products {
   background-color: $colorgrey;

@@ -26,7 +26,11 @@
       <br />
       Ces valeurs tournent autour de l'écologie et la qualité.
     </p>
-    <button class="whiteFilledBtn">En savoir plus</button>
+     <div class="bouton">
+      <router-link to="/Marque" class="whiteFilledBtn"
+        >En savoir plus</router-link
+      >
+    </div>
   </div>
 </template>
 <script>
@@ -40,6 +44,15 @@
   button {
     margin-top: 12px;
   }
+}
+
+.bouton {
+  margin-bottom: 2em;
+  margin-top: 4em;
+}
+
+.whiteFilledBtn{
+  text-decoration: none;
 }
 
 .valeurs {

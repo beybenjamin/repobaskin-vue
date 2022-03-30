@@ -36,15 +36,19 @@
     <div class="mobile-navbar">
       <ul>
         <li>
+          <img src="/imgs/information_1.svg" alt="#">
           <router-link to="/marque" class="router">La marque</router-link>
         </li>
         <li>
+          <img src="/imgs/galerie-dimages.svg" alt="#">
           <router-link to="/galerie" class="router">La galerie</router-link>
         </li>
         <li>
+          <img src="/imgs/contact.svg" alt="#">
           <router-link to="/contact" class="router">Contact</router-link>
         </li>
         <li>
+          <img src="/imgs/chaussures.svg" alt="#">
           <router-link to="/perso" class="router">Ma paire</router-link>
         </li>
       </ul>
