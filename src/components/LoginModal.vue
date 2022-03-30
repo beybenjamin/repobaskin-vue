@@ -63,7 +63,17 @@
           >
             {{ subscribeModal ? "Se connecter" : "Créer un compte" }}
           </button>
-          <button class="e-fullbutton">
+          <button
+            class="e-fullbutton"
+            @click="
+              $emit('close');
+              $store.commit('setUser', {
+                userid: 1,
+                displayName: 'John Smith',
+                email: 'haha@yahoo.com',
+              });
+            "
+          >
             {{ subscribeModal ? "S'inscrire" : "Connexion" }}
           </button>
         </div>

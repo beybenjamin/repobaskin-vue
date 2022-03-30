@@ -18,38 +18,62 @@
           <router-link to="/perso" class="router">Ma paire</router-link>
         </li>
         <li v-if="user.id" class="e-menu__li">
-          <a href="/profil" id="e-menu__img"
+          <router-link to="/profil" id="e-menu__img"
             ><img src="/imgs/icon_profil.png" alt=""
-          /></a>
+          /></router-link>
         </li>
         <li v-else class="e-menu__li">
           <a href="#" @click="openModal = true" class="router">Se connecter</a>
           <LoginModal :open="openModal" @close="openModal = false" />
         </li>
         <li class="e-menu__li">
-          <a href="#" id="e-menu__img"
-            ><img src="/imgs/icon_cart.png" alt=""
-          /></a>
+          <a href="#" id="e-menu__img">
+            <img src="/imgs/icon_cart.png" alt="" />
+          </a>
         </li>
       </ul>
     </div>
     <div class="mobile-navbar">
       <ul>
         <li>
-          <img src="/imgs/information_1.svg" alt="#">
-          <router-link to="/marque" class="router">La marque</router-link>
+          <router-link
+            to="/marque"
+            class="router"
+            :class="{ active: $route.path == '/marque' }"
+          >
+            <img src="/imgs/information_1.svg" alt="#" />
+            La marque
+          </router-link>
         </li>
         <li>
-          <img src="/imgs/galerie-dimages.svg" alt="#">
-          <router-link to="/galerie" class="router">La galerie</router-link>
+          <router-link
+            to="/galerie"
+            class="router"
+            :class="{ active: $route.path == '/galerie' }"
+          >
+            <img src="/imgs/galerie-dimages.svg" alt="#" />
+            La galerie
+          </router-link>
         </li>
         <li>
-          <img src="/imgs/contact.svg" alt="#">
-          <router-link to="/contact" class="router">Contact</router-link>
+          <router-link
+            to="/contact"
+            class="router"
+            :class="{ active: $route.path == '/contact' }"
+          >
+            <img src="/imgs/contact.svg" alt="#" />
+            Contact
+          </router-link>
         </li>
         <li>
-          <img src="/imgs/chaussures.svg" alt="#">
-          <router-link to="/perso" class="router">Ma paire</router-link>
+          <router-link
+            to="/perso"
+            class="router"
+            :class="{ active: $route.path == '/perso' }"
+          >
+            <img src="/imgs/chaussures.svg" alt="#" />
+            Ma paire
+          </router-link>
         </li>
       </ul>
     </div>
@@ -69,6 +93,7 @@ export default {
       openModal: false,
     };
   },
+  mounted() {},
   computed: {
     user() {
       return this.$store.state.user;
@@ -170,12 +195,25 @@ export default {
       li {
         height: 100%;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           color: #626262;
           font-size: 0.8em;
+          min-height: max-content;
+          img {
+            width: 30px;
+            height: 30px;
+            filter: hue-rotate(90deg);
+          }
+          &.active {
+            color: $colordarkgreen;
+            font-weight: bold;
+          }
         }
       }
     }

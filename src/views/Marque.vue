@@ -33,16 +33,17 @@
       <div class="e-paragraphe">
         <p>
           L'un des plus grands obstacles à la durabilité environnementale dans
-          l'industrie de la chaussure est le <strong>cycle saisonnier</strong> de
-          la mode et la <strong>pression marketing</strong> associée qui est
-          implacablement appliquée aux consommateurs. Conformez-vous au dernier
-          look ou vous n’êtes personne !
+          l'industrie de la chaussure est le
+          <strong>cycle saisonnier</strong> de la mode et la
+          <strong>pression marketing</strong> associée qui est implacablement
+          appliquée aux consommateurs. Conformez-vous au dernier look ou vous
+          n’êtes personne !
         </p>
         <br />
         <p>
           Cette stratégie de l'industrie, génère d'énormes profits, mais elle
           tue notre planète. Nous pensons que le style doivent être
-          <stong>durables</stong>, <stong>ethniques</stong> et adaptés pour
+          <strong>durables</strong>, <strong>ethniques</strong> et adaptés pour
           <strong>l'individu</strong>
         </p>
         <br />
@@ -78,7 +79,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-
 .e-paragraphe {
   padding: 2em 2em;
   max-width: 1100px;
@@ -141,7 +141,7 @@ export default {
   margin-bottom: 2em;
 }
 
-.container{
+.container {
   padding: 0;
 }
 
@@ -166,8 +166,8 @@ export default {
   }
 
   .e-image2 {
-  max-width: 90%;
-  max-height: 90%;
+    max-width: 90%;
+    max-height: 90%;
   }
 }
 </style>

@@ -14,8 +14,18 @@
         <li :class="{ active: activeTab === 3 }" @click="activeTab = 3">
           Mes précommandes
         </li>
-        <li :class="{ active: activeTab === 4 }" @click="activeTab = 4">
-          Mes créations
+        <li
+          :class="{ active: activeTab === 4 }"
+          @click="
+            $router.push('/');
+            $store.commit('setUser', {
+              id: null,
+              displayName: null,
+              email: null,
+            });
+          "
+        >
+          Déconnexion
         </li>
       </ul>
     </nav>
