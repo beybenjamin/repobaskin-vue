@@ -4,7 +4,9 @@
     <section class="c-perso">
       <div class="c-perso__container">
 
-        <!--<img class="e-perso__img_perso" src="/imgs/{{IDchoice+IDcolor}}.png" alt="" /> -->
+        <!-- IDEA du test image en dynamique 
+            
+            <img class="e-perso__img_perso" src="/imgs/{{IDurl}}.png" alt="" /> -->
         
         
         <div class="c-perso__icon">
@@ -15,6 +17,44 @@
 
       </div>
 
+
+    <ul class="c-list">
+        <li class="c-list__item" id="semelle">Semelle</li>
+        <li class="c-list__item" id="languette" >Languette</li>
+        <li class="c-list__item -Actif" id="logo">Logo</li>
+        <li class="c-list__item" id="bande">Bandes</li>
+        </ul>
+
+        <ul class="c-Colorlist" id="Menucustom">
+      <button class="c-Colorlist__item -shoesdarkred"  id="r" onclick=""></button>
+      <button class="c-Colorlist__item -shoesyellow" id="y"></button>
+      <button class="c-Colorlist__item -shoesgreen" id="g"></button>
+      <button class="c-Colorlist__item -shoesblue -ColorActif" id="b" ></button>
+      <button class="c-Colorlist__item -shoesredpink" id="p" ></button>
+      <button class="c-Colorlist__item -shoesblack" id="B" ></button>
+      <button class="c-Colorlist__item -shoesgrey" id="G" ></button>
+      <button class="c-Colorlist__item -shoeswhite" id="W" ></button>
+    </ul>
+
+        
+    <!--   début code test (Just an IDEA :)  
+
+   function getID() {
+       let IDchoice= document.getElementById() ;
+       let IDcolor= document.getElementById();
+     
+     String (IDurl)=(IDchoice + IDcolor);
+     IDchoice;
+     IDcolor;
+     IDurl;
+    //var a= document.getElementById('#r')
+    }
+    getID; 
+
+_______________________________ fin Code test
+
+-->
+    
 
 <!-- test 1 
 
@@ -27,12 +67,7 @@
         <input type="button" name="choice" id="choice-4" hidden><li class="c-list__item">Bandes</li>
         
  -->
-         <ul class="c-list">
-        <li class="c-list__item" id="semelle">Semelle</li>
-        <li class="c-list__item" id="languette" >Languette</li>
-        <li class="c-list__item -Actif" id="logo">Logo</li>
-        <li class="c-list__item" id="bande">Bandes</li>
-      </ul> -->
+         
 
         <!--<div class="product">
             <img src="" alt="Product">
@@ -106,7 +141,7 @@
    
    
 
-    <ul class="c-Colorlist" id="Menucustom">
+   <!-- <ul class="c-Colorlist" id="Menucustom">
       <button class="c-Colorlist__item -shoesdarkred"  id="r" onclick=""></button>
       <button class="c-Colorlist__item -shoesyellow" id="y"></button>
       <button class="c-Colorlist__item -shoesgreen" id="g"></button>
@@ -115,7 +150,7 @@
       <button class="c-Colorlist__item -shoesblack" id="B" ></button>
       <button class="c-Colorlist__item -shoesgrey" id="G" ></button>
       <button class="c-Colorlist__item -shoeswhite" id="W" ></button>
-    </ul>
+    </ul> -->
     
   </div>
 
