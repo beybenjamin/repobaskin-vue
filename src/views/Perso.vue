@@ -1,26 +1,31 @@
 <template>
   <div class="perso">
     <section class="c-perso">
-      <!-- <div class="c-perso__container">
-        <div class="c-perso__icon">
-          <img class="e-perso__icon -save" src="\imgs\save.png" alt="" />
+      <div class="top">
+        <div class="c-perso__container">
+          <img
+            class="e-perso__icon -save"
+            src="\imgs\save.png"
+            alt=""
+            @click="printShoe"
+          />
           <img class="e-perso__icon -share" src="\imgs\share.png" alt="" />
           <img class="e-perso__icon -buy" src="\imgs\buy.png" alt="" />
         </div>
-      </div> -->
-      <div class="result-container" id="result">
-        <img src="/imgs/partie chaussure/base.png" />
-        <img
-          v-for="category of categories"
-          class="absolute-img"
-          :key="category.title"
-          :src="
-            '/imgs/partie chaussure/' +
-            category.imgPrefix +
-            category.activeColor +
-            '.png'
-          "
-        />
+        <div class="result-container" id="result">
+          <img src="/imgs/partie chaussure/base.png" />
+          <img
+            v-for="category of categories"
+            class="absolute-img"
+            :key="category.title"
+            :src="
+              '/imgs/partie chaussure/' +
+              category.imgPrefix +
+              category.activeColor +
+              '.png'
+            "
+          />
+        </div>
       </div>
       <ul class="c-list">
         <li
@@ -45,12 +50,12 @@
         </li>
       </ul>
     </section>
-    <button @click="printShoe">print</button>
   </div>
 </template>
 
 <script>
 import html2canvas from "html2canvas";
+import { saveAs } from "file-saver";
 
 export default {
   name: "Perso",
@@ -91,7 +96,8 @@ export default {
   methods: {
     printShoe() {
       html2canvas(document.getElementById("result")).then((canvas) => {
-        document.body.appendChild(canvas);
+        const imgsrc = canvas.toDataURL("image/png");
+        saveAs(imgsrc, "basket.png");
       });
     },
   },
@@ -99,27 +105,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-:root {
-  box-sizing: border-box;
-}
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-.result-container {
+.top {
+  width: 100%;
   position: relative;
-  width: min-content;
-  margin: auto;
-  img.absolute-img {
+  .c-perso__container {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    img {
+      width: 40px;
+      height: 40px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    @media (max-width: 700px) {
+      position: relative;
+      flex-direction: row;
+      max-width: 50%;
+      margin: auto;
+      margin-top: 24px;
+      margin-bottom: 24px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
 }
 
@@ -127,6 +142,22 @@ export default {
   padding: 64px 0;
   max-width: 1100px;
   margin: auto;
+}
+
+.result-container {
+  position: relative;
+  width: min-content;
+  margin: auto;
+  img {
+    max-width: 80vw;
+  }
+  img.absolute-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .color-list {
@@ -142,6 +173,11 @@ export default {
     transition: all ease 230ms;
     caret-color: transparent;
 
+    @media (max-width: 700px) {
+        width: 30px;
+        height: 30px;
+        padding: 2px;
+    }
     &:hover {
       cursor: pointer;
     }
@@ -162,40 +198,20 @@ export default {
   }
 }
 
-.c-perso__container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 100px;
-}
-
-.e-perso__img_perso {
-  position: absolute;
-  margin: 0;
-  padding: 0;
-}
-
-.e-perso__icon {
-  display: flex;
-  padding-top: 33px;
-  width: 30px;
-  padding-left: 750px;
-}
-
 .c-list {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   padding: 1rem;
   align-items: center;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 24px;
   justify-content: center;
 
   &__item {
     margin-left: 1rem;
     margin-right: 1rem;
-    font-size: pxToRem(25);
-    line-height: pxToRem(25);
+    font-size: 1.8em;
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
@@ -204,14 +220,15 @@ export default {
       cursor: pointer;
     }
     &.active {
-      font-size: pxToRem(50);
+      font-size: 2.5em;
     }
-  }
-}
 
-.e-perso {
-  &__separateur {
-    border-top: solid 3px $colordarkgreen;
+    @media (max-width: 700px) {
+      font-size: 1em;
+      &.active {
+        font-size: 1.5em;
+      }
+    }
   }
 }
 </style>
