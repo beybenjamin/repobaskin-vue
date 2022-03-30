@@ -165,6 +165,7 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 24px;
   li {
     width: 45px;
     height: 45px;

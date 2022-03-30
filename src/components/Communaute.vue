@@ -10,7 +10,7 @@
         }"
       >
         <li v-for="(img, i) of imgList" :key="i" class="e-gallerie__fond">
-          <img :src="img.url" class="e-gallerie__image" />
+          <img :src="img.acf.image_url" class="e-gallerie__image" />
           <svg
             @click="likeUrl(i)"
             class="e-heart"
@@ -25,7 +25,7 @@
         </li>
       </ul>
     </div>
-     <div class="bouton">
+    <div class="bouton">
       <router-link to="/Galerie" class="whiteFilledBtn"
         >En savoir plus</router-link
       >
@@ -33,40 +33,35 @@
   </div>
 </template>
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
-      imgList: [
-        { url: "imgs/chaussure.png", liked: false },
-        { url: "imgs/chaussure_2.png", liked: false },
-        { url: "imgs/chaussure_3.png", liked: false },
-        { url: "imgs/chaussure_4.png", liked: false },
-        { url: "imgs/chaussure_5.png", liked: false },
-        { url: "imgs/chaussure.png", liked: false },
-        { url: "imgs/chaussure.png", liked: false },
-        { url: "imgs/chaussure_2.png", liked: false },
-        { url: "imgs/chaussure_3.png", liked: false },
-        { url: "imgs/chaussure_4.png", liked: false },
-        { url: "imgs/chaussure_5.png", liked: false },
-        { url: "imgs/chaussure.png", liked: false },
-        { url: "imgs/chaussure.png", liked: false },
-        { url: "imgs/chaussure_2.png", liked: false },
-        { url: "imgs/chaussure_3.png", liked: false },
-        { url: "imgs/chaussure_4.png", liked: false },
-        { url: "imgs/chaussure_5.png", liked: false },
-        { url: "imgs/chaussure.png", liked: false },
-        { url: "imgs/chaussure.png", liked: false },
-        { url: "imgs/chaussure_2.png", liked: false },
-        { url: "imgs/chaussure_3.png", liked: false },
-        { url: "imgs/chaussure_4.png", liked: false },
-        { url: "imgs/chaussure_5.png", liked: false },
-        { url: "imgs/chaussure.png", liked: false },
-      ],
+      imgList: [],
     };
+  },
+  mounted() {
+    this.getShoes();
   },
   methods: {
     likeUrl(photoIndex) {
       this.imgList[photoIndex].liked = !this.imgList[photoIndex].liked;
+    },
+    getShoes() {
+      axios
+        .get(
+          `https://sitebaskin.benjaminbey.fr/wp-json/wp/V2/chaussures?per_page=100`
+        )
+        .then((response) => {
+          this.imgList = response.data.map((shoe) => ({
+            liked: false,
+            ...shoe,
+          }));
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     },
   },
 };
@@ -79,7 +74,7 @@ export default {
   margin-top: 4em;
 }
 
-.whiteFilledBtn{
+.whiteFilledBtn {
   text-decoration: none;
 }
 

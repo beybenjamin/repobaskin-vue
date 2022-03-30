@@ -1,5 +1,5 @@
 <template>
-  <div class="gallerie" >
+  <div class="gallerie">
     <ImageHeader title="La galerie" imgUrl="imgs/ban_2.jpeg" />
     <div class="gallerie__fond">
       <ul class="e-products">
@@ -31,6 +31,18 @@
         </li>
       </ul>
     </div>
+    <div class="paging">
+      <button :disabled="activePage <= 1" @click="setPage(activePage - 1)">
+        &lt;
+      </button>
+      {{ activePage }} / {{ maxPage }}
+      <button
+        :disabled="activePage >= maxPage"
+        @click="setPage(activePage + 1)"
+      >
+        &gt;
+      </button>
+    </div>
   </div>
 </template>
 
@@ -42,6 +54,8 @@ export default {
   data() {
     return {
       shoes: [],
+      activePage: 1,
+      maxPage: 1,
     };
   },
   mounted() {
@@ -52,11 +66,17 @@ export default {
       const shoe = this.shoes.find((shoe) => shoe.id == id);
       shoe.liked = !shoe.liked;
     },
+    setPage(nb) {
+      this.activePage = nb;
+      this.getShoes(nb);
+    },
     getShoes() {
       axios
-        .get(`https://sitebaskin.benjaminbey.fr/wp-json/wp/V2/chaussures?per_page=100`)
+        .get(
+          `https://sitebaskin.benjaminbey.fr/wp-json/wp/V2/chaussures?per_page=10&page=${this.activePage}`
+        )
         .then((response) => {
-          console.log(response.data);
+          this.maxPage = parseInt(response.headers["x-wp-totalpages"]);
           this.shoes = response.data.map((shoe) => ({ liked: false, ...shoe }));
         })
         .catch((error) => {
@@ -70,6 +90,21 @@ export default {
 <style lang="scss" scoped>
 .gallerie {
   padding-bottom: 100px;
+}
+
+.paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 12px;
+  button {
+    border: none;
+    font-size: 1.5em;
+    background: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 .titre {
@@ -180,8 +215,7 @@ li {
   }
 }
 
-.container{
+.container {
   padding: 0;
 }
-
 </style>
