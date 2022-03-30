@@ -28,7 +28,11 @@
         </p>
       </div>
       <div class="e-div__image2">
+<<<<<<< Updated upstream
         <img class="e-image2" src="imgs/Marque.gif" alt="#" />
+=======
+        <img class="e-image2" src="imgs/gif.gif" alt="#" />
+>>>>>>> Stashed changes
       </div>
       <div class="e-paragraphe">
         <p>
@@ -133,6 +137,7 @@ export default {
 }
 
 .e-image2 {
+<<<<<<< Updated upstream
   width: auto;
   height: auto;
   margin-left: auto;
@@ -140,6 +145,9 @@ export default {
   max-width: none;
   max-height: none;
   display: block;
+=======
+  margin: auto;
+>>>>>>> Stashed changes
 }
 
 .bouton {
